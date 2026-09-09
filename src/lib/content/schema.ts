@@ -55,6 +55,8 @@ export const SiteSchema = z.object({
   email: z.email(),
   linkedin: z.url(),
   github: z.url(),
+  /** X (Twitter) profile, e.g. https://x.com/handle */
+  x: z.url().optional(),
   resumePdf: z.string(), // "/resume.pdf"
   /** Short "what I'm doing now" line for the hero and footer. */
   now: z.string().optional(),

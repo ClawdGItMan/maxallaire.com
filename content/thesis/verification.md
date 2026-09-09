@@ -2,7 +2,7 @@
 slug: verification
 title: Verification is the scarce resource
 subtitle: In agent-to-agent payments the money already moves. Nobody has solved how the paying agent knows the work was any good.
-order: 1
+order: 2
 updated: 2026-09-09
 thirtySecond: >-
   Agents can find each other (MCP, A2A) and pay each other (x402, USDC, smart wallets). The one layer with no production answer is judging whether the paid-for work was actually good. Payment rails earn on throughput, so none of them want to be the party that says "this doesn't settle." That leaves the verification seat open, and the party that decides whether to release payment holds the position of trust. I built a prototype to test this in April 2026, and the data I collected cut against my own model on volume and price per transaction. I still hold the thesis at medium conviction, and this essay says exactly what would move it.

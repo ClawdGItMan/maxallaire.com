@@ -2,7 +2,7 @@
 slug: tokenization
 title: Tokenization is already won on Solana
 subtitle: The interesting question is no longer whether institutions come. It is what they do once they are here.
-order: 2
+order: 3
 updated: 2026-09-09
 thirtySecond: >-
   In Q2 2026 Solana carried $5.77B of tokenized-stock volume, about 96% of every chain combined, and led every other chain combined for 54 straight weeks. Kamino and Jupiter hold 83% of tokenized-stock collateral, so the assets are being used, not just issued. The buried lede is R3: on 2026-08-17 Corda Enterprise 4.14 shipped a Solana notary, which means banks running private ledgers now depend on Solana's validators without putting a single confidential record on a public chain. J.P. Morgan arranged commercial paper on Solana in December 2025. Visa and Mastercard settle stablecoins on it. Western Union issues one on it. The question I would ask an institution now is not "why Solana" but "what are you going to do with the assets once they are here."

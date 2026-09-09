@@ -5,7 +5,7 @@ import { EssayCard } from "@/components/essay-card";
 
 export const metadata: Metadata = {
   title: "Thesis",
-  description: "Three essays on where crypto and AI meet, each with a 30-second version and the evidence that would prove it wrong.",
+  description: "Four essays on where crypto and AI meet, each with a 30-second version and the evidence that would prove it wrong.",
 };
 
 const PRINCIPLES = [
@@ -29,7 +29,7 @@ export default function ThesisIndex() {
             Priors, <em>written down.</em>
           </>
         }
-        lede="Three positions on where crypto and AI meet. Each one opens with the 30-second version and closes with what would make me wrong."
+        lede="Four positions on where crypto and AI meet, starting with the one I published in April. Each one opens with the 30-second version and closes with what would make me wrong."
       />
 
       {essays.length === 0 ? (

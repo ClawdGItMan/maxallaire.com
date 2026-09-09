@@ -13,6 +13,7 @@ export function Footer({ site }: { site: Site }) {
     { href: `mailto:${site.email}`, label: "Email", value: site.email },
     { href: site.linkedin, label: "LinkedIn", value: site.linkedin.replace(/^https?:\/\/(www\.)?/, "") },
     { href: site.github, label: "GitHub", value: site.github.replace(/^https?:\/\/(www\.)?/, "") },
+    ...(site.x ? [{ href: site.x, label: "X", value: site.x.replace(/^https?:\/\/(www\.)?/, "") }] : []),
   ];
 
   return (

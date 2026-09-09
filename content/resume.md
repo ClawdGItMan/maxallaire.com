@@ -1,6 +1,6 @@
 # Maxwell Allaire
 
-[max.allaire@gmail.com](mailto:max.allaire@gmail.com) · +1 (617) 800-3122 · [linkedin.com/in/max-allaire](https://www.linkedin.com/in/max-allaire) · [github.com/ClawdGItMan](https://github.com/ClawdGItMan) · [maxallaire.com](https://maxallaire.com)
+[max.allaire@gmail.com](mailto:max.allaire@gmail.com) · +1 (617) 800-3122 · [linkedin.com/in/max-allaire](https://www.linkedin.com/in/max-allaire) · [github.com/ClawdGItMan](https://github.com/ClawdGItMan) · [x.com/Finderofgolden](https://x.com/Finderofgolden) · [maxallaire.com](https://maxallaire.com)
 
 ## Experience
 

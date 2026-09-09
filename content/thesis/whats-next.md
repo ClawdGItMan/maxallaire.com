@@ -2,7 +2,7 @@
 slug: whats-next
 title: What mainstream adoption looks like next
 subtitle: Solana spent the last year winning the argument and losing the trade. Here is what I think happens after that.
-order: 3
+order: 4
 updated: 2026-09-09
 thirtySecond: >-
   As of 2026-09-03, SOL traded at $104 against a $293 all-time high, DeFi TVL had halved to $5.8B, and the market had stopped paying for throughput, even as every institutional milestone landed. I run four questions to keep this straight: is the tech getting better (yes: Alpenglow passed 2026-09-02, Firedancer is on mainnet), are institutions here (yes, see the tokenization essay), is anyone making money on-chain (apps yes, $257M in Q2 2026; holders less so), and does any of it accrue to SOL (unresolved). The next phase of adoption is not consumer apps. It is stablecoin settlement at payment networks and agentic payments, where Solana already carries roughly 65% of x402 volume. Whether that reprices the token is the open question, and I would rather say so than point at transaction counts.
