@@ -7,7 +7,7 @@ I research where crypto and AI meet, then build prototypes with AI tooling to fi
 
 ## Experience
 
-**Wormhole Foundation** — BD Associate / DeFi Lead · Jul 2025 – 2026
+**Wormhole Foundation** — BD Associate / DeFi Lead · Jul 2025 – Mar 2026
 Owned DeFi partnerships for a cross-chain messaging protocol: sourced and qualified protocol integrations, structured partnership proposals, and ran the pipeline from first call to live integration. Built the internal lead-generation and CRM tooling the team used to track it.
 
 **AgriDex** — Partnerships & Growth Manager · Aug 2024 – Jun 2025

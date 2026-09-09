@@ -42,3 +42,11 @@ Choices made without asking, in the order they came up. Plain language.
 - **Copy I wrote (not the content stream):** the page titles ("Priors, written down." / "Built to find out." / "Direct the work. Judge the outcome."), the three door-card blurbs on the home page, the section intros. All stay inside the BD-operator positioning; easy to change in the page files if Max prefers different lines.
 - **Extra routes:** a styled 404 page and `sitemap.xml` built from the content loaders.
 - **Second content trim: `content/projects/x402-verifier.json` `oneLiner` was 145 characters** ("An x402 facilitator prototype with an LLM-as-judge endpoint for work quality…" → "x402 facilitator prototype with an LLM-as-judge work-quality endpoint…", 137). Same 140-limit issue as fieldnotes; flagged for the content stream.
+
+## Task A5 — deploy
+
+- **GitHub repo `ClawdGItMan/maxallaire.com` is public** and includes `docs/` (the sprint plan, spec, status and this log). They contain no secrets (checked: only `.env.example` is tracked; a grep for key patterns hits only the plan's own description of that grep), but they are internal planning notes now visible to anyone. If Max would rather keep them private, move `docs/` out of the repo; nothing in the site depends on it.
+- **Vercel project `maxallaire-com`** on team `maxallaire-1603s-projects`, Node 24, Next.js preset. `vercel link` connected the GitHub repo automatically, so `vercel git connect` was a no-op; pushes to `main` redeploy production.
+- **Domain attached with the single-argument form** (`vercel domains add maxallaire.com` inside the linked project). The two-argument form in the plan is rejected by the current CLI. Nameservers were already on Vercel DNS, so HTTPS was live within about a minute of attaching.
+- **`www.maxallaire.com` added too** so the www form redirects to the apex instead of failing.
+- **The `.vercel/` link directory stays untracked** (already in `.gitignore`).
