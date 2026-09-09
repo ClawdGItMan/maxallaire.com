@@ -21,7 +21,7 @@
   "screenshots": [
     {
       "src": "/screenshots/x402-verifier/desktop.png",
-      "alt": "The verifier dashboard: browser wallet on Base Sepolia, agent USDC balance, and the live payment path from demo service through the local facilitator to settlement"
+      "alt": "The verifier dashboard: browser wallet on testnet, agent USDC balance, and the live payment path from demo service through the local facilitator to settlement"
     },
     {
       "src": "/screenshots/x402-verifier/mobile.png",
