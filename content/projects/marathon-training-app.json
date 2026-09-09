@@ -1,0 +1,23 @@
+{
+  "slug": "marathon-training-app",
+  "name": "Marathon Training App",
+  "oneLiner": "A single-user marathon training app with Whoop and Strava sync, a real backend with row-level security, and a public demo mode.",
+  "band": "shipped",
+  "status": "live",
+  "period": "Jul–Aug 2026",
+  "order": 1,
+  "stack": ["Next.js 16", "React 19", "TypeScript", "Supabase (Postgres, Auth, RLS)", "Whoop API", "Strava API + webhooks", "Vercel Cron", "Service worker (offline shell)", "Playwright", "Vitest"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/marathon-training-app",
+    "live": "https://marathon-training-app-brown.vercel.app"
+  },
+  "screenshots": [
+    { "src": "/screenshots/marathon-training-app/desktop.png", "alt": "The Daily home screen in the Instrument design system: near-black graphite, hairline rules, one lime signal colour" },
+    { "src": "/screenshots/marathon-training-app/progress.png", "alt": "Progress: weekly mileage, pace and recovery trends with tabular numerals" },
+    { "src": "/screenshots/marathon-training-app/plan.png", "alt": "Plan: the training block by week with per-session-type accents" },
+    { "src": "/screenshots/marathon-training-app/log.png", "alt": "Log: synced Strava activities and Whoop recovery snapshots" }
+  ],
+  "whatIBuilt": "A training app I built for myself between 2026-07-01 and 2026-08-24, in 90 commits. Phase 1 was a localStorage prototype with the screens I wanted: Daily, Progress, Plan, Log, Strength and a workout-detail view. Phase 2 added a real Supabase backend with row-level security on every table, live Whoop and Strava sync (including Strava webhooks and token rotation), an encrypted token store, an offline shell via a service worker, and a morning cron that runs hourly but only fires when it is 6am in the profile's own timezone, so it survives daylight-saving changes.\n\nOn 2026-08-24 I added a public demo mode: a VIEW DEMO button signs visitors into a seeded demo account server-side, scoped by RLS to the demo rows only, and a reset script wipes visitor drift back to the clean seed. The test suite covers 42 Playwright end-to-end tests in local mode plus unit tests and stack-backed RLS parity suites.",
+  "whatILearned": "The difference between a prototype and a product is the list of things that can go wrong: expired OAuth tokens that rotate on refresh, a webhook that has to be registered after deploy because its callback URL does not exist before, a cron that drifts with daylight saving, a service worker that would serve stale code in development. Each of those is documented in the README because each one bit me once.\n\nI also learned that a demo mode is a product feature, not an afterthought. Making the app safely usable by strangers required the same RLS discipline as making it private.",
+  "builtWithAI": "Designed first in a Claude Design handoff (the Instrument design system), then built by Claude Code against phase specs in the repo's docs. My checkpoints were physical: sign in on my phone, connect Whoop and Strava, airplane-mode the app and reopen it, watch the 6am briefing arrive. The security-sensitive surface is listed in a separate doc for a future human reviewer, which is how I flag code I have not read."
+}

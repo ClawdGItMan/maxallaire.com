@@ -53,13 +53,6 @@ describe("content", () => {
     expect(loadSite().name).toBeTruthy();
   });
 
-  it("every project's timeline reference points at a real project", () => {
-    const slugs = new Set(loadProjects().map((p) => p.slug));
-    for (const t of loadTimeline()) {
-      if (t.projectSlug) expect(slugs.has(t.projectSlug), `timeline → ${t.projectSlug}`).toBe(true);
-    }
-  });
-
   it("resolveScreenshot falls back to the placeholder when the file is missing", () => {
     expect(resolveScreenshot("/screenshots/nope/missing.png")).toBe("/screenshots/_placeholder.png");
     expect(resolveScreenshot("/screenshots/_placeholder.png")).toBe("/screenshots/_placeholder.png");

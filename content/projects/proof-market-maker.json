@@ -1,0 +1,21 @@
+{
+  "slug": "proof-market-maker",
+  "name": "Proof Market Maker",
+  "oneLiner": "An always-on market-making bot with inventory control, self-healing reconnects and a two-stage kill switch, plus an operator dashboard.",
+  "band": "headliner",
+  "status": "demo",
+  "period": "Jun 2026",
+  "order": 4,
+  "stack": ["TypeScript", "Node.js", "Proof.trade SDK", "Next.js (ops dashboard)", "Supabase", "Edge Functions", "pm2 / systemd / Docker"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/proof-market-maker"
+  },
+  "screenshots": [
+    { "src": "/screenshots/proof-market-maker/desktop.png", "alt": "The ops dashboard: PnL estimate, inventory, feed health, open orders, audit log and the RUN / SOFT / HARD kill switch" },
+    { "src": "/screenshots/proof-market-maker/mobile.png", "alt": "The ops dashboard on a phone" }
+  ],
+  "whatIBuilt": "A market maker for the Proof.trade paper-trading competition, finished 2026-06-24. It quotes both sides of a market continuously, leans its prices to sell down inventory when it gets one-sided, pauses and re-syncs when the exchange connection drops without leaving stray orders, and has a two-stage kill switch: soft (stop quoting) and hard (flatten everything and stand down). It was built to survive dropped connections, frozen feeds, rate limits and crashes, with a crash-recovery journal and a stale-feed watchdog. No real money: development network, play funds.\n\nAlongside it, a read-only operator dashboard ([proof-ops-dashboard](https://github.com/ClawdGItMan/proof-ops-dashboard)) that shows PnL, inventory, feed health, open orders and the audit log live every two seconds, with the kill switch behind fail-closed basic auth. The kill-switch write never touches a service-role key: the server action presents a control-scoped secret to a Supabase Edge Function, so a leaked dashboard secret can only flip the switch, never forge bot state. A cloud outage can never prevent a stop.",
+  "whatILearned": "Reliability engineering is mostly deciding what happens when things go wrong, in advance. The interesting parts of this project are not the pricing strategy, which is a few lines, but the watchdog, the token bucket, the journal and the rule that a stale cloud value never overrides a local hard stop.\n\nI also learned how to think about a trust model in plain terms: what can each credential do if it leaks, and is that the smallest thing it could do. That is a question I now ask of every integration a partner proposes.",
+  "solanaRelevance": "Market making is the job that keeps on-chain venues liquid, and liquidity depth is what Solana's tokenized-equity venues and perps are judged on. Building one, even on paper, taught me the operator's view of a venue: feed reliability, order-cancel latency and kill-switch design matter more to a market maker than headline throughput. That is the conversation I would have with a liquidity partner.",
+  "builtWithAI": "Built by Claude Code from a spec that led with failure modes rather than features. The verification I trusted was the scripted demo (quote, force a connection drop, recover, keep going) and live QA of the dashboard kill switch, which surfaced a real gotcha: credentials embedded in the URL silently break the poll in Chromium. That went into the README."
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "x402-verifier",
+  "name": "x402 Verifier Facilitator",
+  "oneLiner": "An x402 facilitator that inserts an LLM-as-judge quality gate between /verify and /settle. V1 prototype, stalled honestly.",
+  "band": "headliner",
+  "status": "prototype",
+  "period": "Apr 2026",
+  "order": 2,
+  "stack": ["TypeScript", "pnpm monorepo", "x402 (@x402/core, /express, /fetch, /evm)", "Base Sepolia", "USDC", "Next.js dashboard", "LLM-as-judge (Anthropic / OpenAI)"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/x402-verifier-facilitator"
+  },
+  "screenshots": [
+    { "src": "/screenshots/x402-verifier/desktop.png", "alt": "The verifier dashboard: browser wallet on Base Sepolia, agent USDC balance, and the live payment path from demo service through the local facilitator to settlement" },
+    { "src": "/screenshots/x402-verifier/mobile.png", "alt": "The verifier dashboard on a phone" }
+  ],
+  "whatIBuilt": "Every x402 facilitator shipping in spring 2026 verified the payment: signature, nonce, settlement. None verified the work. For subjective agent tasks like writing or analysis, a signature-verified settlement is not enough; the agent paying needs a quality gate. So I built a third-party facilitator that proxies the reference x402.org facilitator and inserts an LLM-as-judge step before /settle.\n\nWhat shipped between 2026-04-20 and 2026-04-29: a pnpm monorepo with a facilitator, a paid demo service, a buyer agent and a browser dashboard. Four settlements on Base Sepolia, all with transaction hashes in the README: a baseline x402 payment on 2026-04-23, the same payment routed through my facilitator-in-the-middle, and two dashboard-triggered agent runs. Seven task-type endpoints were scoped (structured extraction, code, summarisation, translation, creative, strategic, generic). The judge has one rubric of the seven, and it is not yet in the settlement path. It stalled on 2026-04-29 and I have written it up that way rather than as a finished product.",
+  "whatILearned": "Three things broke the March assumptions. Solana had overtaken Base on daily x402 volume by mid-January 2026, so the chain choice I made in March was already stale; the lesson recorded at the time was to build chain-abstract from day one. The category where verification matters most, AI-generated services, had almost no volume ($14.2k against $548.5k in agent-to-agent services). And the judge does not pay for itself at micropayment scale: $0.01–$0.15 per evaluation against a $0.20 average transaction is 5–75% of the value. Whether agent transactions grow past about $5 is the single load-bearing assumption in the whole thesis.\n\nI also learned what a real prototype costs in operator time: funding testnet wallets, chasing faucets, reading facilitator responses. Doing it myself is why I can now explain the settlement path to a partner in plain language.",
+  "solanaRelevance": "The design is chain-abstract precisely because Solana flipped Base on x402 volume mid-build. The gap it targets, outcome verification on top of a payment standard, is the one piece missing from Solana's agentic-payments stack as of September 2026: the network has settlement, attestation-based identity and roughly 65% of x402 volume, and nothing that checks an agent did what it was paid for. Pay.sh meters access per call; that is not the same thing.",
+  "builtWithAI": "Built entirely by directing Claude Code against a twelve-section implementation plan written in the research vault first. I never read the code. I judged it by whether the transactions settled on Base Sepolia, whether the dashboard showed the payment path live in a browser, and whether the README matched what I saw. The four transaction hashes are the evidence."
+}

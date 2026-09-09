@@ -1,0 +1,20 @@
+{
+  "slug": "personal-os",
+  "name": "Personal OS",
+  "oneLiner": "One dashboard for a life's data: calendar, sleep, training, health and money, pulled from five integrations into a single private view.",
+  "band": "shipped",
+  "status": "demo",
+  "period": "May–Jun 2026",
+  "order": 2,
+  "stack": ["Next.js", "TypeScript", "Supabase", "Google Calendar OAuth", "Whoop", "Strava", "Apple Health", "Plaid", "Expo (mobile client)", "Vercel AI SDK", "Playwright"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/personal-os"
+  },
+  "screenshots": [
+    { "src": "/screenshots/personal-os/desktop.png", "alt": "Personal OS home: today's calendar, recovery, training load and accounts on one screen" },
+    { "src": "/screenshots/personal-os/mobile.png", "alt": "The Expo mobile client from the feature/app-alive branch" }
+  ],
+  "whatIBuilt": "A single-user dashboard that pulls Google Calendar, Whoop, Strava, Apple Health and Plaid into one place, built between 2026-05-21 and 2026-06-08 in 101 commits on the main branch. Integration tokens are encrypted at rest, a cron keeps each source in sync, and there is a privacy page that says exactly what is stored and why. A sub-app called Stride handles training, and the most advanced branch (feature/app-alive) adds an Expo mobile client and an AI assistant over the same data.\n\nIt is presented here as a design-and-thinking workup rather than a finished product: the integrations map, the trust model for a single-user app that holds bank and health data, and what I would change. The screens are rendered from the design handoff and the running app.",
+  "whatILearned": "Holding someone's bank and health data in one place, even your own, forces the trust model to come first: encrypt the tokens, keep it single-tenant, write the privacy page before the feature. That order is now how I start any project that touches personal data.\n\nI also learned where I drift. Personal OS spawned a training sub-app, a mobile client and an AI assistant within three weeks, and the marathon app that followed was the disciplined version: one user, one goal, one integration at a time. The ELO Agent Operating System proposal (June 2026) came directly out of watching this happen.",
+  "builtWithAI": "Built with Claude Code across thirteen spec and plan documents in the repo. This is the project where I learned that agents need a committed thread per week and an idea inbox for everything else; without it, the builder followed every new idea I had, which is how it ended up with a dozen feature branches."
+}

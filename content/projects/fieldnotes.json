@@ -1,0 +1,23 @@
+{
+  "slug": "fieldnotes",
+  "name": "Fieldnotes",
+  "oneLiner": "Editorial reference site on agentic payments, Solana liquidity and institutional adoption, with a day-gated data refresh and review flags.",
+  "band": "headliner",
+  "status": "live",
+  "period": "Sep 2026",
+  "order": 3,
+  "stack": ["React 19", "TypeScript", "Vinext", "Cloudflare Workers", "shadcn/ui", "Recharts", "Node test runner"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/fieldnotes"
+  },
+  "screenshots": [
+    { "src": "/screenshots/fieldnotes/home.png", "alt": "Fieldnotes home: the editorial front page with the latest explainers and outlook pieces" },
+    { "src": "/screenshots/fieldnotes/payments.png", "alt": "Payments section: protocol roles, payment scenarios and the sources behind each claim" },
+    { "src": "/screenshots/fieldnotes/solana.png", "alt": "Solana section: finality, decentralisation and value-capture explainers with metric selectors" },
+    { "src": "/screenshots/fieldnotes/institutions.png", "alt": "Institutions timeline: dated events with status reflecting the evidence at each event date" }
+  ],
+  "whatIBuilt": "Fieldnotes is where my research gets published in a form other people can read: short explainers with a dek, a one-line takeaway and a reviewed date, over five routes (payments, Solana, institutions, a source library and study notes). Ten first-edition articles as of 2026-09-05, each section labelled as evidence, analysis or outlook, each evidence section tied to a source record with its URL, review date and scope.\n\nThe part I am proudest of is the pipeline underneath. A note importer pulls only an allowlisted set of sections from the research vault, strips discussion prompts and rejects private paths and token-like secrets. A data refresh runs at most once per calendar day, validates stablecoin, TVL, DEX-volume and fee observations against a schema, excludes partial months, never interpolates, and keeps the last good value on any failure. Public-page checks are reachability and hash checks only: a changed page is a review flag for a human, not an automatic change to a claim. It is deployed as a private site; the screenshots here are how it looks.",
+  "whatILearned": "Editorial integrity is a set of rules you can write down and test. \"Never present a planned integration as live.\" \"A receipt is not a verdict.\" \"Event status reflects evidence at its event date.\" Once those were in a runbook, the agent building the site could enforce them, and the nine content and import tests fail when a claim loses its source.\n\nI also learned that the hard part of a data-driven site is not fetching data, it is refusing to overwrite good data with bad. The refresh design spends most of its logic on what not to do.",
+  "solanaRelevance": "Two of the five routes are about Solana directly: a section on Alpenglow finality, validator clients and value capture, and an institutions timeline that separates a launched token, an actual transaction, service availability and network-wide production usage. That distinction is the one I would bring to any conversation about which institutional partnerships have published volume and which are still press releases.",
+  "builtWithAI": "Specified the routes, the editorial rules and the refresh behaviour in a runbook; Claude Code built the site, the importer, the refresh script and the tests against it. I checked the result in a browser at 1440px and 390px and by reading the emitted refresh JSON, not the code."
+}

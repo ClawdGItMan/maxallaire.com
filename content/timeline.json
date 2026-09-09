@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "month": "2026-02",
+    "title": "First builds: GeoWatch and ETF Screener",
+    "detail": "Two weekend projects to learn the spec-plan-build loop with Claude Code: a geopolitical conflict and macro dashboard, and a BlackRock ETF screener. Both deployed to Vercel.",
+    "projectSlug": "geowatch"
+  },
+  {
+    "month": "2026-02",
+    "title": "Crypto Leads",
+    "detail": "A lead-generation app for DeFi protocols and Wormhole integrations with AI summaries, built for the BD work I was doing at the time. Later replatformed into Leads CRM.",
+    "projectSlug": "leads-crm"
+  },
+  {
+    "month": "2026-03",
+    "title": "M1 agentic payments report and the Project Momentum sprint",
+    "detail": "The first milestone report of the agentic-payments research program (2026-03-23): stablecoins, smart wallets, payment patterns, verification, chains and standards. In parallel, a two-week Expo sprint on a social self-improvement app to decide whether it should become a company.",
+    "projectSlug": "agentic-payments-research"
+  },
+  {
+    "month": "2026-04",
+    "title": "x402 verifier prototype, four Base Sepolia settlements, Consensus Miami",
+    "detail": "Scaffolded a pnpm monorepo, settled a baseline x402 payment on Base Sepolia on 2026-04-23, then routed it through my own facilitator-in-the-middle and a browser dashboard. Stalled 2026-04-29. Took the thesis to Consensus Miami.",
+    "projectSlug": "x402-verifier"
+  },
+  {
+    "month": "2026-05",
+    "title": "Hearth build starts; Personal OS",
+    "detail": "A private client asked for an operations platform for a staffed household. First commit 2026-05-04. Personal OS, a single-user life dashboard pulling Google Calendar, Whoop, Strava, Apple Health and Plaid into one place, started the same month.",
+    "projectSlug": "hearth"
+  },
+  {
+    "month": "2026-06",
+    "title": "Hearth in production, Proof market maker, Dart Tracker",
+    "detail": "Hearth shipped to real users by 2026-06-10 after 721 commits. Built a market-making bot with a kill switch and an operator dashboard for the Proof.trade paper-trading competition. Started Dart Tracker, a two-person collector's catalogue, as a design-first experiment.",
+    "projectSlug": "proof-market-maker"
+  },
+  {
+    "month": "2026-07",
+    "title": "Marathon training app; VC thesis vault",
+    "detail": "Started the marathon app on 2026-07-01: Supabase with row-level security, Whoop and Strava sync, an hourly cron pinned to 6am local time. Began the VC and thesis vault where the sector theses on this site originate.",
+    "projectSlug": "marathon-training-app"
+  },
+  {
+    "month": "2026-08",
+    "title": "Marathon public demo; Fieldnotes refresh pipeline",
+    "detail": "Added a public demo mode to the marathon app (2026-08-24) so visitors can use it without an account. Designed the day-gated data refresh with human review flags that Fieldnotes runs on.",
+    "projectSlug": "fieldnotes"
+  },
+  {
+    "month": "2026-09",
+    "title": "Solana knowledge vault, Field Manual published, this site",
+    "detail": "Built a 74-note Solana knowledge base (2026-09-02 to 09-05) around four questions. Published the Agentic Payments Field Manual on 2026-09-06. Shipped this portfolio in three days with five parallel agents.",
+    "projectSlug": "agentic-payments-research"
+  }
+]

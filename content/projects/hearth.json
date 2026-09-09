@@ -1,0 +1,18 @@
+{
+  "slug": "hearth",
+  "name": "Hearth",
+  "oneLiner": "A production operations platform for a staffed household: calendar, tasks, requests, documents and a daily briefing, scoped by role.",
+  "band": "shipped",
+  "status": "case-study",
+  "period": "May–Jun 2026",
+  "order": 3,
+  "stack": ["Next.js 16", "React 19", "TypeScript", "Supabase (Postgres, RLS)", "NextAuth (Google SSO)", "Slack API (threads, slash command, Block Kit)", "Google Calendar & Drive", "Anthropic API", "Sentry", "Vercel Cron", "Playwright + axe", "Vitest"],
+  "links": {},
+  "screenshots": [
+    { "src": "/screenshots/hearth/desktop.png", "alt": "Hearth's Today view for a house manager, rendered with placeholder data: schedule, open requests, tasks and the daily briefing" },
+    { "src": "/screenshots/hearth/mobile.png", "alt": "Hearth on a phone, placeholder data" }
+  ],
+  "whatIBuilt": "A private client, a staffed household, asked for a single source of truth for schedules, tasks, projects, travel and staff operations. Most family apps are built for two working parents; this one had to serve principals who want calm visibility, a house manager who lives in it, and line staff who need narrow views, without becoming three separate apps. The bar was that anyone could open it and know within five seconds what is happening today, what needs them, and what is new.\n\nIt went from first commit on 2026-05-04 to production with real users by 2026-06-10: 721 commits, 95 database migrations, 265 test files, 13 scheduled jobs (daily briefing, weekly digest, task reminders, document expirations, calendar-webhook renewal, an AI self-evaluation and more). Permissions are two-dimensional, role by per-item visibility, and configured by an admin rather than fixed. Slack is the messaging layer: every item gets a thread, a slash command adds tasks or approves requests, and Block Kit buttons handle approvals. Documents live in Google Drive under a narrow drive.file scope. The AI assistant is embedded in specific surfaces (natural-language quick-add, per-role daily briefing, request routing, weekly digest), not a sidebar chatbot. Everything shown here uses placeholder data; the repository stays private.",
+  "whatILearned": "Design the permissions model before any role's screens, because the screens are downstream of it. That single decision, made on day one, is what let the same data serve a parent, a house manager and a cleaner without three apps.\n\nProduction with real users changes the definition of done. The scheduled jobs, the Sentry wiring, the offboarding path that revokes access without losing someone's notes, the AI self-eval cron that grades its own briefings: none of that appears in a demo, and all of it is what the client actually paid for. It is also where I learned to run a verifier agent independently of the builder, because a client cannot be the one who finds the bug.",
+  "builtWithAI": "Six weeks of Claude Code, directed from a project brief, a data model, an integrations doc and a permissions model written before any code. Builds ran in day shifts with logged briefs; a separate agent verified each slice in a browser, with accessibility checks, before I reviewed it. I never read the code. I reviewed outcomes against the client's five-second bar and against the demo script we ran with them."
+}
