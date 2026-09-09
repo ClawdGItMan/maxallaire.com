@@ -6,17 +6,30 @@
   "status": "live",
   "period": "Mar–Sep 2026",
   "order": 1,
-  "stack": ["Primary-source research", "Obsidian vault", "Claude Code", "HTML Field Manual", "GitHub Pages", "CC BY 4.0"],
+  "stack": [
+    "Primary-source research",
+    "Obsidian vault",
+    "Claude Code",
+    "HTML Field Manual",
+    "GitHub Pages",
+    "CC BY 4.0"
+  ],
   "links": {
     "repo": "https://github.com/ClawdGItMan/agentic-payments-research",
     "live": "https://clawdgitman.github.io/agentic-payments-research/"
   },
   "screenshots": [
-    { "src": "/screenshots/agentic-payments-research/desktop.png", "alt": "The Agentic Payments Field Manual, a single-page synthesis with dated figures and a contradictions section" },
-    { "src": "/screenshots/agentic-payments-research/mobile.png", "alt": "The Field Manual on a phone" }
+    {
+      "src": "/screenshots/agentic-payments-research/desktop.png",
+      "alt": "The Agentic Payments Field Manual, a single-page synthesis with dated figures and a contradictions section"
+    },
+    {
+      "src": "/screenshots/agentic-payments-research/mobile.png",
+      "alt": "The Field Manual on a phone"
+    }
   ],
   "whatIBuilt": "Between March and September 2026 I ran a research program on agentic payments: AI agents transacting with other agents, autonomously, using stablecoins and smart contracts. The output was a milestone report (2026-03-23) covering stablecoins, smart wallets, payment patterns, oracles and verification, chains and standards; a set of protocol reference notes; a map of the verification landscape split by what is verified, who renders the verdict, and when it fires; and five open questions logged with explicit probabilities rather than conclusions.\n\nIn September 2026 I cleaned it up into a public repository and a one-page Field Manual designed to be scanned rather than read start to finish. Every figure carries its date. The section I care most about is the one titled \"the numbers that cut against the story\": x402 daily transactions down 92% from the December 2025 peak, about half of remaining volume suspected wash trading, a $0.20 average transaction against the $5–50 my model assumed.",
-  "whatILearned": "The finding I kept returning to: agents can already find each other and pay each other, and nobody has solved how a paying agent knows the work it bought was any good. The structural reason that layer stays empty is that payment rails earn on throughput and a quality gate reduces throughput.\n\nI also learned to keep my priors on paper. On whether agent identity standardises, I logged 45% balkanised, 40% dominant-player quasi-standard, 15% a real single standard within twelve months. Six months on, a stated prior is scoreable; a confident guess is not. And I learned the March assumption that Base would be the launch chain was wrong by mid-January 2026, which is why the verifier design became chain-abstract.",
+  "whatILearned": "The finding I kept returning to: agents can already find each other and pay each other, and nobody has solved how a paying agent knows the work it bought was any good. The structural reason that layer stays empty is that payment rails earn on throughput and a quality gate reduces throughput.\n\nI also learned to write my guesses down with numbers attached. On whether AI agents will end up sharing one identity standard, I wrote down a 45% chance it stays fragmented, 40% that one big player's version becomes the default, and 15% that a true standard exists within a year. Six months later I can check those against what actually happened, which you can't do with a vague hunch.\n\nThe other lesson was about chains. I built the first prototype on Base because that is where x402 launched, but I always believed Solana would win. The numbers agreed sooner than I planned for: Solana passed Base on daily x402 volume in January 2026. That is why the verifier was designed to work on any chain, not just one.",
   "solanaRelevance": "The research recorded Solana overtaking Base on daily x402 volume by mid-January 2026 and running roughly 65% of year-to-date transactions, which became the basis for how I think about Solana's position in agentic payments. It also documents the gap most relevant to the Foundation's Pay.sh program: metered per-call access is not outcome verification, and the ecosystem moved toward that gap in 2026 rather than closing it.",
   "builtWithAI": "The vault was built with Claude Code as the research assistant: I set the questions and the source standard (protocol specs, engineering blogs, on-chain data, filings, not secondary coverage), agents pulled and structured the material, and a session-capture hook recorded each working session into the vault automatically. The Field Manual HTML and the public repository were produced the same way, with me reviewing every claim for a date or a source before it shipped."
 }
