@@ -14,13 +14,13 @@
   {
     "month": "2026-03",
     "title": "M1 agentic payments report and the Project Momentum sprint",
-    "detail": "The first milestone report of the agentic-payments research program (2026-03-23): stablecoins, smart wallets, payment patterns, verification, chains and standards. In parallel, a two-week Expo sprint on a social self-improvement app to decide whether it should become a company.",
+    "detail": "The first milestone report of the agentic-payments research program (2026-03-23), put together with AI as a research tool and reviewed by me: stablecoins, smart wallets, payment patterns, verification, chains and standards. In parallel, a two-week Expo sprint on a social self-improvement app to decide whether it should become a company.",
     "projectSlug": "agentic-payments-research"
   },
   {
     "month": "2026-04",
-    "title": "x402 verifier prototype, four Base Sepolia settlements, Consensus Miami",
-    "detail": "Scaffolded a pnpm monorepo, settled a baseline x402 payment on Base Sepolia on 2026-04-23, then routed it through my own facilitator-in-the-middle and a browser dashboard. Stalled 2026-04-29. Took the thesis to Consensus Miami.",
+    "title": "x402 verifier prototype, four testnet settlements, Consensus Miami",
+    "detail": "Scaffolded a pnpm monorepo, settled a baseline x402 payment on testnet on 2026-04-23, then routed it through my own facilitator-in-the-middle and a browser dashboard. Stalled 2026-04-29. Took the thesis to Consensus Miami.",
     "projectSlug": "x402-verifier"
   },
   {

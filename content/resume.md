@@ -6,7 +6,7 @@
 
 **AI Research and Experimentation** — Self-employed · March 2026 – Present
 
-- Designed and prototyped an x402 payment "verifier facilitator": a service that inserts an AI quality check between payment verification and settlement, so an agent only pays for work that meets spec. Settled baseline transactions on Base Sepolia and scoped judge rubrics for seven task types.
+- Designed and prototyped an x402 payment "verifier facilitator": a service that inserts an AI quality check between payment verification and settlement, so an agent only pays for work that meets spec. Settled baseline transactions on testnet and scoped judge rubrics for seven task types.
 - Replatformed a DeFi partnerships lead-generation CRM with AI-generated prospect summaries and CSV import, and documented a handoff runbook so a BD team could run it without me.
 - Built an automated market-making bot for the Proof.trade paper-trading competition, with inventory management, self-healing, and a two-stage kill switch, plus an operator dashboard for PnL, inventory, and feed health.
 - Shipped 10+ full-stack web applications in five months as a solo, non-engineer founder, including three in production with real users: a family-operations platform for staffed households, a marathon training app with Whoop and Strava sync, and a personal life-ops dashboard. Deployed on Vercel and Supabase with automated test suites and row-level security.

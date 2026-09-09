@@ -43,7 +43,7 @@ I keep these deliberately, because they are the numbers that get forgotten first
 
 x402 daily transactions fell 92% from the December 2025 peak to February 2026 (731k to 57k). Daily volume sat at roughly $28k and was flat from March to April 2026. Multiple analyses put around half of that volume down to wash or self-trading. The average transaction was $0.20, true micropayment territory, against the $5–50 my March 2026 model assumed.
 
-Solana flipped Base. My March 2026 report assumed Base as the launch chain. By mid-January 2026 Solana had overtaken Base on daily x402 volume and ran roughly 65% of year-to-date transactions, while Base still led cumulative ($21.5M vs $16.4M) and enterprise tooling. The lesson I wrote down at the time: build chain-abstract from day one.
+Solana flipped Base. I always expected Solana to win here, and it happened faster than my March 2026 model allowed for. By mid-January 2026 Solana had overtaken Base on daily x402 volume and ran roughly 65% of year-to-date transactions, while Base still led cumulative ($21.5M vs $16.4M) and enterprise tooling. The lesson I wrote down at the time: build chain-abstract from day one.
 
 The valuable category is the smallest one. Where x402 dollars flowed as of spring 2026: agent-to-agent services $548.5k, infrastructure and utilities $267.1k, AI-generated services $14.2k. The category where quality verification matters most is the one with almost no volume, either because demand is not there or because verification cost is what gates it. I never resolved that.
 
@@ -57,4 +57,4 @@ Second, if reputation works well enough, most transactions never need judging. P
 
 My answer to both is that the tail is where the money is, and the audit trail is what makes reputation portable in the first place. But that is an assertion, not evidence. The number that would move me most is real dispute rates from any live agent-payment deployment. Nobody has published one as of September 2026.
 
-I tested the mechanics of this myself: [the x402 verifier prototype](/work/x402-verifier), four settlements on Base Sepolia in April 2026, and an honest account of where it stalled.
+I tested the mechanics of this myself: [the x402 verifier prototype](/work/x402-verifier), four testnet settlements in April 2026, and an honest account of where it stalled.
