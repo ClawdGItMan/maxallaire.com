@@ -1,0 +1,21 @@
+{
+  "slug": "etf-screener",
+  "name": "ETF Screener",
+  "oneLiner": "A screener for BlackRock ETFs: filter, sort and compare funds in one table.",
+  "band": "shipped",
+  "status": "live",
+  "period": "Feb 2026",
+  "order": 7,
+  "stack": ["Next.js", "TypeScript", "Vercel"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/ETFScreener",
+    "live": "https://etf-tracker-orcin.vercel.app"
+  },
+  "screenshots": [
+    { "src": "/screenshots/etf-screener/desktop.png", "alt": "ETF Screener: a filterable, sortable table of BlackRock funds" },
+    { "src": "/screenshots/etf-screener/mobile.png", "alt": "ETF Screener on a phone" }
+  ],
+  "whatIBuilt": "A screener focused on BlackRock's ETF range, built in February 2026 as my second project with Claude Code: a filterable and sortable table of funds with the fields I actually compare, deployed on Vercel.",
+  "whatILearned": "Scope. GeoWatch tried to do two things; this did one, and it was done in days. It is also the first time I noticed that a Next.js app with a clear data shape is something an agent builds well on the first pass, which shaped the stack I have used since.",
+  "builtWithAI": "Built with Claude Code from a one-paragraph brief and a list of the columns I wanted."
+}

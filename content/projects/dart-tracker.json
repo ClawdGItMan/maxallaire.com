@@ -1,0 +1,20 @@
+{
+  "slug": "dart-tracker",
+  "name": "Dart Tracker",
+  "oneLiner": "A two-person collector's catalogue designed like a gallery: a world map, a white wall, and one page per specimen.",
+  "band": "experiment",
+  "status": "prototype",
+  "period": "Jun 2026",
+  "order": 1,
+  "stack": ["Next.js", "TypeScript", "Tailwind + shadcn/ui", "Claude Design"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/dart-tracker"
+  },
+  "screenshots": [
+    { "src": "/screenshots/dart-tracker/desktop.png", "alt": "Dart Tracker's gallery wall: the collection hung on a white background in the White Cube design system" },
+    { "src": "/screenshots/dart-tracker/mobile.png", "alt": "Dart Tracker on a phone" }
+  ],
+  "whatIBuilt": "A private catalogue for two collectors, built 2026-06-21 to 06-22. Every object is pinned to the place it was found on a world map, hung on a gallery wall, and given a specimen page with where and when it was acquired and the memory attached. The design system, \"The White Cube,\" is MoMA-style: black on white, the object photography is the only colour in the room. UI scaffold only; no data layer yet.",
+  "whatILearned": "Two non-coders can drive a design-first build together if the design brief is the shared artefact. We agreed the look in Claude Design before any code, and the collaboration doc says who owns which branch. It is also a reminder that a project can stop at a scaffold and still have taught something.",
+  "builtWithAI": "Mockups in Claude Design, scaffold by Claude Code from the design-system doc."
+}

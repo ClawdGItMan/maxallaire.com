@@ -32,3 +32,13 @@ Choices made without asking, in the order they came up. Plain language.
 - **Dev preview** runs from `/Users/me/Projects/.claude/launch.json` (session-level, not committed) on port 3456.
 - **Process fix: the check's exit code is captured directly.** The first A3 commit slipped through with failing tests because the check output was piped through `grep`, which hid the non-zero exit. That commit was amended; every later commit runs `npm run check` unpiped and aborts on failure.
 - **One-character content fix in `content/projects/fieldnotes.json`.** Its `oneLiner` was 141 characters against the schema's 140 limit ("An editorial reference site…" → "Editorial reference site…"). The content stream owns that file; flagged in the final report so they do not re-introduce it.
+
+## Task A4 — pages
+
+- **Home shows every headliner (currently four),** not "three" as the plan guessed; the content stream marked four projects as headliners and dropping one would be an editorial call I should not make.
+- **Every project gets a `/work/[slug]` page, experiments included.** The spec limits detail pages to headliners and shipped products, but the experiment rows on `/work` need somewhere to go and the pages cost nothing at build time. Experiments still render as a compact list on the index.
+- **Screenshot dimensions are read from the PNG header at build time** (`src/lib/images.ts`), so `next/image` gets real width/height: no layout shift, portrait phone captures are detected and framed as such, and missing files fall back to the placeholder with a small "Screenshot pending" tag.
+- **The resume PDF button only appears once `public/resume.pdf` exists.** Until then the page shows "PDF coming shortly" and the home page links to `/resume` instead of a dead file.
+- **Copy I wrote (not the content stream):** the page titles ("Priors, written down." / "Built to find out." / "Direct the work. Judge the outcome."), the three door-card blurbs on the home page, the section intros. All stay inside the BD-operator positioning; easy to change in the page files if Max prefers different lines.
+- **Extra routes:** a styled 404 page and `sitemap.xml` built from the content loaders.
+- **Second content trim: `content/projects/x402-verifier.json` `oneLiner` was 145 characters** ("An x402 facilitator prototype with an LLM-as-judge endpoint for work quality…" → "x402 facilitator prototype with an LLM-as-judge work-quality endpoint…", 137). Same 140-limit issue as fieldnotes; flagged for the content stream.

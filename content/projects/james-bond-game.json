@@ -1,0 +1,24 @@
+{
+  "slug": "james-bond-game",
+  "name": "007 · Licence to Code",
+  "oneLiner": "A complete offline top-down spy game in a single HTML file, art and sound generated in code. A non-commercial fan tribute.",
+  "band": "experiment",
+  "status": "demo",
+  "period": "May 2026",
+  "order": 4,
+  "stack": ["HTML5 Canvas", "Vanilla JavaScript", "Web Audio (procedural score)", "No build, no assets"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/james-bond-game"
+  },
+  "screenshots": [
+    { "src": "/screenshots/james-bond-game/05-gunbarrel.png", "alt": "The gun-barrel opening sequence" },
+    { "src": "/screenshots/james-bond-game/06-menu.png", "alt": "The HQ menu" },
+    { "src": "/screenshots/james-bond-game/01-boot.png", "alt": "Mission briefing as a classified dossier" },
+    { "src": "/screenshots/james-bond-game/02-gameplay.png", "alt": "Gameplay: guards with vision cones raising the alarm" },
+    { "src": "/screenshots/james-bond-game/03-boss.png", "alt": "The three-phase boss fight in the volcano lair" },
+    { "src": "/screenshots/james-bond-game/04-victory.png", "alt": "Victory screen with time and survival bonuses" }
+  ],
+  "whatIBuilt": "A three-mission spy game that runs by double-clicking one HTML file: a chemical facility, a casino with a sniper on overwatch, and a volcano lair with a three-phase boss. Guards have vision cones, raise the alarm, take cover and call for backup. The gun-barrel opening, the dossier briefings, the artwork and the score are all generated live in code; there are no asset files and it works offline. Built in May 2026. It is an unofficial, non-commercial fan tribute; the marks belong to their owners and the score is original.",
+  "whatILearned": "That a single agent session can produce something genuinely fun, and that the constraints I set (one file, no assets, no install) were what made it good rather than what limited it. It is also the project people ask about most, which says something about what makes work legible.",
+  "builtWithAI": "One long Claude Code session from a description of the three missions and the constraint that it must run from a double-click."
+}

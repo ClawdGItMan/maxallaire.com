@@ -1,0 +1,20 @@
+{
+  "slug": "project-momentum",
+  "name": "Project Momentum",
+  "oneLiner": "A two-week founder sprint on a social self-improvement app: an Expo MVP plus a founder operating system to decide whether it should exist.",
+  "band": "experiment",
+  "status": "prototype",
+  "period": "Mar 2026",
+  "order": 2,
+  "stack": ["Expo / React Native", "Expo Router", "TypeScript", "HealthKit", "Node backend"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/project-momentum"
+  },
+  "screenshots": [
+    { "src": "/screenshots/project-momentum/desktop.png", "alt": "Project Momentum: the iPhone MVP shell with onboarding, feed, composer and habits" },
+    { "src": "/screenshots/project-momentum/mobile.png", "alt": "Project Momentum feed on a phone" }
+  ],
+  "whatIBuilt": "In March 2026 a cofounder and I gave ourselves two weeks to answer one question with conviction: should this become a real company? Momentum (working name Outtcast) was a social self-improvement app meant to make progress visible and culturally aspirational. The repo holds both halves of that sprint: a founder operating system (mission, live status, decisions log, sprint plan, cofounder setup) and an Expo Router MVP with onboarding, feed, composer, profile, habits and a squads surface, with HealthKit wired in for a physical-iPhone alpha.",
+  "whatILearned": "Writing the decision record first was worth more than the app. The sprint answered its own question: the demand research did not support a company, and having that on paper made stopping easy rather than emotional. The founder-OS pattern (soul, heartbeat, memory, sprint docs) carried straight into how I run every project now.",
+  "builtWithAI": "The MVP scaffold and the founder docs were built with Claude Code against a two-founder collaboration playbook that spelled out background-AI and merge rules, so two non-engineers could work on one codebase."
+}

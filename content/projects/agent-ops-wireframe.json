@@ -1,0 +1,20 @@
+{
+  "slug": "agent-ops-wireframe",
+  "name": "Agent Ledger (wireframe)",
+  "oneLiner": "A static wireframe of an operations console for supervising AI agents: workflow queue, credit spend, outputs and a command channel.",
+  "band": "experiment",
+  "status": "prototype",
+  "period": "Apr 2026",
+  "order": 5,
+  "stack": ["HTML", "CSS", "Vanilla JavaScript"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/agent-ops-wireframe"
+  },
+  "screenshots": [
+    { "src": "/screenshots/agent-ops-wireframe/desktop.png", "alt": "Agent Ledger: left rail of agents, a workflow queue with credit use in the centre, and an inspector and command channel on the right" },
+    { "src": "/screenshots/agent-ops-wireframe/mobile.png", "alt": "Agent Ledger collapsed into stacked sections on a narrow screen" }
+  ],
+  "whatIBuilt": "An afternoon wireframe from 2026-04-18 of what a calm, local operations console for an agent workforce might look like: a left rail with agents and link status, a main workspace with the workflow queue, current credit use, final results and an activity map, and a right rail with the selected workflow's details and a command channel. Selecting a workflow updates the inspector; typing a command appends to the channel. Warm off-white surfaces, hairlines instead of cards, status colours that are functional rather than decorative.",
+  "whatILearned": "This is the sketch that became the Mission Control section of the ELO Agent Operating System proposal two months later. Two design questions I wrote down at the time are still open: should it feel like a system monitor or an agent inbox, and should credits be budget guardrails or cost estimates. Wireframing it first is why the later proposal timeboxed the real build to two days.",
+  "builtWithAI": "Built in a live preview loop: describe a change in chat, refresh the browser, repeat. No framework, so the whole thing is three files."
+}

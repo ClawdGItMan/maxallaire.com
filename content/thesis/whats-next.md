@@ -16,7 +16,7 @@ whatWouldMakeMeWrong:
 
 Solana spent the last year winning the argument and losing the trade. Every institutional box got checked: spot ETFs, Visa and Mastercard settling stablecoins, Western Union issuing one, R3 anchoring Corda's notary to Solana mainnet, roughly 96% of all on-chain tokenized-stock volume. Meanwhile, as of 2026-09-03, SOL traded at $104 against a $293.31 all-time high (2025-01-19), DeFi TVL had halved from $12.11B to $5.83B, and value capture was the loudest open critique in the ecosystem. The technical roadmap is finally landing. The market has stopped paying for throughput.
 
-I built a study vault in early September 2026 to make sense of that, and I organised it around four questions. They are the four I would expect any serious counterparty to ask.
+I organised a study vault in early September 2026 around four questions, the four any serious counterparty would ask.
 
 ## 1. Is the tech actually getting better?
 
@@ -24,7 +24,7 @@ Yes, and this is the year it became true rather than promised.
 
 Alpenglow, the consensus rewrite, passed its governance vote on 2026-09-02 (SIMD-0326, ~98% yes on ~52% of stake participating). Feature-gate activation begins 2026-09-28 with full deployment in October 2026. It replaces finality-by-depth (32 stacked votes, 12.8 seconds) with finality-by-certificate: a target of ~150ms median, with a test cluster running since 2026-05-11 hitting 96% fast-path finalization at 214ms. I hold the 150ms number loosely. It is Anza's simulation and excludes computation overhead. What I do trust is the direction and the second-order effect: removing votes from the chain cuts the validator profitability floor by roughly ten times, which is the best structural answer anyone has to the validator-count decline from ~2,500 in March 2023 to ~800–900 now.
 
-Firedancer, the ground-up second client, reached mainnet somewhere in the December 2025 to May 2026 window and produces live blocks; Frankendancer climbed above 20% of stake through 2026. I would still describe real client diversity as closer to two implementations than the "four clients" line, because Jito-Solana is Agave with additions. That is the honest version.
+Firedancer, the ground-up second client, reached mainnet somewhere in the December 2025 to May 2026 window and produces live blocks; Frankendancer climbed above 20% of stake through 2026. I would still describe real client diversity as closer to two implementations than the "four clients" line, because Jito-Solana is Agave with additions.
 
 ## 2. Are institutions actually here?
 
@@ -34,7 +34,7 @@ Yes. I made that case in [the tokenization essay](/thesis/tokenization) and will
 
 The apps are. Solana dApps generated $257M in Q2 2026 revenue, about 41% of all Web3 dApp revenue, leading all chains for a ninth straight quarter. Non-vote transactions hit an all-time high of 5.2B in August 2026.
 
-But the dollars behind that are shrinking. TVL is down 52% from its 2025-09-09 peak. Monthly DEX volume fell from ~$145B (October 2025) to $42B (April 2026). Solana's share of global fees dropped from 26.6% in Q1 2026 to 17.3% in Q2. And the revenue quality caveat matters: most of it is trading and token-launch revenue, which is cyclical and was in a downcycle. Pump.fun alone did $46M in Q2 2026 and it is a speculation venue. No Solana consumer app reached mainstream scale this year. I would say that out loud before an institution says it to me.
+But the dollars behind that are shrinking. TVL is down 52% from its 2025-09-09 peak. Monthly DEX volume fell from ~$145B (October 2025) to $42B (April 2026). Solana's share of global fees dropped from 26.6% in Q1 2026 to 17.3% in Q2. And the revenue quality caveat matters: most of it is cyclical trading and token-launch revenue. Pump.fun alone did $46M in Q2 2026 and it is a speculation venue. No Solana consumer app reached mainstream scale this year. I would say that out loud before an institution says it to me.
 
 ## 4. Does any of it accrue to SOL?
 
