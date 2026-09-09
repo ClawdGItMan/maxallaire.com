@@ -1,0 +1,20 @@
+{
+  "slug": "agentic-payments-research",
+  "name": "Agentic Payments Research",
+  "oneLiner": "Six months of primary research on how AI agents pay for things, published as a field manual.",
+  "band": "headliner",
+  "status": "live",
+  "period": "Mar–Sep 2026",
+  "order": 1,
+  "stack": ["Markdown", "GitHub Pages", "Claude Code"],
+  "links": {
+    "repo": "https://github.com/ClawdGItMan/agentic-payments-research",
+    "live": "https://clawdgitman.github.io/agentic-payments-research/"
+  },
+  "screenshots": [
+    { "src": "/screenshots/agentic-payments-research/field-manual.png", "alt": "The Agentic Payments Field Manual, front page" }
+  ],
+  "whatIBuilt": "A research program on agentic payments: monthly reports, a running contradictions log, and a public field manual that summarises what the evidence says about how AI agents actually transact.\n\nPlaceholder entry seeded by the site scaffold — the content stream replaces this file.",
+  "whatILearned": "Placeholder — replaced by the content stream.",
+  "solanaRelevance": "Placeholder — replaced by the content stream."
+}
