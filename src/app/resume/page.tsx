@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { loadSite, loadMarkdown } from "@/lib/content/load";
 import { publicFileExists } from "@/lib/images";
 import { Markdown } from "@/components/markdown";
-import { PageShell } from "@/components/page-shell";
+import { PageShell, Sheet } from "@/components/page-shell";
+import { PrintButton } from "@/components/print-button";
 
 export const metadata: Metadata = {
   title: "Resume",
@@ -16,30 +17,35 @@ export default function ResumePage() {
 
   return (
     <PageShell narrow>
-      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between" data-reveal>
-        <p className="eyebrow tnum">
-          <span className="text-accent">04</span> · Resume
-        </p>
-        {hasPdf ? (
-          <a
-            href={site.resumePdf}
-            className="inline-flex w-fit items-center gap-2 border border-ink px-4 py-2.5 text-[0.85rem] uppercase tracking-[0.12em] transition-colors hover:bg-ink hover:text-paper"
-            download
-          >
-            Download PDF
-            <span aria-hidden>↓</span>
-          </a>
-        ) : (
-          <span className="eyebrow">PDF coming shortly</span>
-        )}
+      <div className="no-print flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between" data-reveal>
+        <div className="flex flex-col gap-5">
+          <p className="eyebrow">
+            <span className="text-accent">04</span> · Resume
+          </p>
+          <h1 className="display text-[2.4rem] sm:text-[3.4rem]">
+            One page, <em>kept current.</em>
+          </h1>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          {hasPdf ? (
+            <a href={site.resumePdf} className="btn btn-primary" download>
+              Download PDF <span aria-hidden>↓</span>
+            </a>
+          ) : (
+            <span className="eyebrow">PDF coming shortly</span>
+          )}
+          <PrintButton />
+        </div>
       </div>
 
-      <div className="mt-10 border-t-2 border-ink pt-10 sm:mt-12">
-        {resume ? (
-          <Markdown className="resume">{resume}</Markdown>
-        ) : (
-          <p className="font-serif text-ink-2">The resume is being edited. Email {site.email} for a copy.</p>
-        )}
+      <div className="mt-12 sm:mt-16" data-scroll>
+        <Sheet>
+          {resume ? (
+            <Markdown className="resume">{resume}</Markdown>
+          ) : (
+            <p className="font-serif text-ink-2">The resume is being edited. Email {site.email} for a copy.</p>
+          )}
+        </Sheet>
       </div>
     </PageShell>
   );

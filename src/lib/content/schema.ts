@@ -56,5 +56,9 @@ export const SiteSchema = z.object({
   linkedin: z.url(),
   github: z.url(),
   resumePdf: z.string(), // "/resume.pdf"
+  /** Short "what I'm doing now" line for the hero and footer. */
+  now: z.string().optional(),
+  /** Numbers shown in the proof strip: [{ value: "721", label: "commits on Hearth" }] */
+  stats: z.array(z.object({ value: z.string(), label: z.string() })).optional(),
 });
 export type Site = z.infer<typeof SiteSchema>;

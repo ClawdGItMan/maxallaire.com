@@ -4,34 +4,40 @@ import { formatMonth } from "@/lib/format";
 
 export function Timeline({ entries, projectSlugs }: { entries: TimelineData; projectSlugs: Set<string> }) {
   if (entries.length === 0) {
-    return <p className="font-serif text-ink-2">Timeline coming shortly.</p>;
+    return <p className="font-serif text-fg-2">Timeline coming shortly.</p>;
   }
   return (
-    <ol className="relative border-l border-rule-strong pl-6 sm:pl-0 sm:border-l-0">
+    <ol className="relative">
+      <span className="absolute left-[3px] top-2 bottom-2 w-px bg-line-strong sm:left-[8.5rem]" aria-hidden />
       {entries.map((e, i) => {
         const showMonth = i === 0 || e.month !== entries[i - 1].month;
         const linked = e.projectSlug && projectSlugs.has(e.projectSlug);
         return (
-          <li key={`${e.month}-${i}`} className="relative grid gap-1 pb-9 sm:grid-cols-[7.5rem_1fr] sm:gap-x-8 sm:pb-10">
+          <li
+            key={`${e.month}-${i}`}
+            className="relative grid gap-2 pb-10 pl-8 sm:grid-cols-[7rem_1fr] sm:gap-x-12 sm:pb-12 sm:pl-0"
+            data-scroll
+          >
             <span
-              className="absolute -left-[1.6rem] top-[0.45em] h-2 w-2 rounded-full bg-paper ring-1 ring-rule-strong sm:hidden"
+              className={`absolute left-0 top-[0.5em] h-[7px] w-[7px] rounded-full sm:left-[calc(8.5rem-3px)] ${
+                showMonth ? "bg-accent shadow-[0_0_0_4px_rgba(255,122,69,0.18)]" : "bg-fg-3"
+              }`}
               aria-hidden
             />
-            <span className={`eyebrow tnum pt-[0.35em] ${showMonth ? "text-ink" : "text-transparent"}`} aria-hidden={!showMonth}>
+            <span className={`mono pt-[0.3em] text-[0.72rem] uppercase tracking-[0.12em] ${showMonth ? "text-fg" : "text-transparent"}`} aria-hidden={!showMonth}>
               {formatMonth(e.month)}
             </span>
-            <div className="flex flex-col gap-2 sm:border-l sm:border-rule-strong sm:pl-8">
-              <span className="absolute hidden sm:block sm:left-[7.5rem] sm:ml-8 sm:-translate-x-[calc(2rem+4.5px)] sm:top-[0.55em] h-2 w-2 rounded-full bg-paper ring-1 ring-rule-strong" aria-hidden />
-              <h3 className="font-serif text-[1.25rem] leading-[1.2] sm:text-[1.35rem]">
+            <div className="flex flex-col gap-2 sm:pl-0">
+              <h3 className="font-serif text-[1.35rem] leading-[1.15] tracking-[-0.01em] sm:text-[1.55rem]" style={{ fontVariationSettings: '"opsz" 48' }}>
                 {linked ? (
-                  <Link href={`/work/${e.projectSlug}`} className="link-ink">
+                  <Link href={`/work/${e.projectSlug}`} className="link-fg">
                     {e.title}
                   </Link>
                 ) : (
                   e.title
                 )}
               </h3>
-              <p className="max-w-[62ch] text-[0.95rem] leading-[1.55] text-ink-2 tnum">{e.detail}</p>
+              <p className="max-w-[64ch] text-[0.95rem] leading-[1.6] text-fg-2 tnum">{e.detail}</p>
             </div>
           </li>
         );

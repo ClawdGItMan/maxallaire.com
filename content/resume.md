@@ -11,8 +11,8 @@
 - Built an automated market-making bot for the Proof.trade paper-trading competition, with inventory management, self-healing, and a two-stage kill switch, plus an operator dashboard for PnL, inventory, and feed health.
 - Shipped 10+ full-stack web applications in five months as a solo, non-engineer founder, including three in production with real users: a family-operations platform for staffed households, a marathon training app with Whoop and Strava sync, and a personal life-ops dashboard. Deployed on Vercel and Supabase with automated test suites and row-level security.
 
-**Wormhole Foundation** — Remote
-Business Development Manager · January 2026 – March 2026
+**Wormhole Foundation** — Remote  
+Business Development Manager · January 2026 – March 2026  
 Business Development Representative, DeFi Lead · July 2025 – January 2026
 
 - Led end-to-end business development and deal execution with top-tier DeFi protocols across multiple ecosystems.
@@ -53,7 +53,7 @@ Business Development Representative, DeFi Lead · July 2025 – January 2026
 
 ## Education
 
-**Tulane University** — Bachelor of Political Science · New Orleans, LA · August 2022 – May 2025
+**Tulane University** — Bachelor of Political Science · New Orleans, LA · August 2022 – May 2025  
 **Brandeis University** · Boston, MA · August 2020 – May 2021
 
 ## Proficiencies

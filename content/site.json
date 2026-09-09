@@ -5,5 +5,13 @@
   "email": "max.allaire@gmail.com",
   "linkedin": "https://www.linkedin.com/in/max-allaire",
   "github": "https://github.com/ClawdGItMan",
-  "resumePdf": "/resume.pdf"
+  "resumePdf": "/resume.pdf",
+  "now": "Researching agentic payments and institutional adoption on Solana. Open to ecosystem and BD roles.",
+  "stats": [
+    { "value": "16", "label": "projects, all written up" },
+    { "value": "3", "label": "in production with real users" },
+    { "value": "$100M+", "label": "partner volume closed at Wormhole" },
+    { "value": "455", "label": "research notes, Mar–Sep 2026" },
+    { "value": "721", "label": "commits on one six-week build" }
+  ]
 }
