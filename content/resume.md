@@ -1,44 +1,61 @@
-# Max Allaire
+# Maxwell Allaire
 
-Business development and ecosystem operator, crypto × AI.
-[max.allaire@gmail.com](mailto:max.allaire@gmail.com) · [linkedin.com/in/max-allaire](https://www.linkedin.com/in/max-allaire) · [github.com/ClawdGItMan](https://github.com/ClawdGItMan)
-
-I research where crypto and AI meet, then build prototypes with AI tooling to find out whether I'm right, and I update my view from the evidence.
+[max.allaire@gmail.com](mailto:max.allaire@gmail.com) · +1 (617) 800-3122 · [linkedin.com/in/max-allaire](https://www.linkedin.com/in/max-allaire) · [github.com/ClawdGItMan](https://github.com/ClawdGItMan) · [maxallaire.com](https://maxallaire.com)
 
 ## Experience
 
-**Wormhole Foundation** — BD Associate / DeFi Lead · Jul 2025 – Mar 2026
-Owned DeFi partnerships for a cross-chain messaging protocol: sourced and qualified protocol integrations, structured partnership proposals, and ran the pipeline from first call to live integration. Built the internal lead-generation and CRM tooling the team used to track it.
+**AI Research and Experimentation** — Self-employed · March 2026 – Present
 
-**AgriDex** — Partnerships & Growth Manager · Aug 2024 – Jun 2025
-Partnerships and go-to-market for a Solana-based agricultural commodities settlement platform. Onboarded counterparties, ran growth experiments, and owned the partner pipeline.
+- Designed and prototyped an x402 payment "verifier facilitator": a service that inserts an AI quality check between payment verification and settlement, so an agent only pays for work that meets spec. Settled baseline transactions on Base Sepolia and scoped judge rubrics for seven task types.
+- Replatformed a DeFi partnerships lead-generation CRM with AI-generated prospect summaries and CSV import, and documented a handoff runbook so a BD team could run it without me.
+- Built an automated market-making bot for the Proof.trade paper-trading competition, with inventory management, self-healing, and a two-stage kill switch, plus an operator dashboard for PnL, inventory, and feed health.
+- Shipped 10+ full-stack web applications in five months as a solo, non-engineer founder, including three in production with real users: a family-operations platform for staffed households, a marathon training app with Whoop and Strava sync, and a personal life-ops dashboard. Deployed on Vercel and Supabase with automated test suites and row-level security.
 
-**Solana Foundation** — Business Development Intern · May – Aug 2024
-Engaged financial institutions on Solana adoption. Structured deal proposals with asset managers and banks. Built a custom GPT for coding Solana applications, an early version of the AI-assisted building I now do full time.
+**Wormhole Foundation** — Remote
+Business Development Manager · January 2026 – March 2026
+Business Development Representative, DeFi Lead · July 2025 – January 2026
 
-**Circle** — Marketing Intern · Jun – Sep 2020
-**General Catalyst** — Competitive Analysis Intern · Mar – Jul 2020
+- Led end-to-end business development and deal execution with top-tier DeFi protocols across multiple ecosystems.
+- Closed high-profile partnerships generating $100M+ in cumulative volume through Wormhole.
+- Conceived and drove a new deployment and token-listing strategy, resulting in the launch of Sunrise, a flagship product with rapid ecosystem adoption.
+- Owned go-to-market strategy for deployments across new blockchains, coordinating launches with dozens of protocols in parallel.
+- Built and maintained strategic relationships with leading founders, DeFi protocols, blockchain foundations, and market makers to accelerate ecosystem growth.
 
-## Independent research & building · Mar – Sep 2026
+**AgriDex Platform** — Partnerships and Growth Manager · August 2024 – June 2025
 
-Six months of primary research and prototypes, all built by directing AI agents (Claude Code) rather than writing code by hand.
+- Promoted and pitched the company to investors.
+- Facilitated the on-ramping and off-ramping of fiat currency into crypto for AgriDex partners.
+- Worked with engineers and developers to develop a state-of-the-art payment system for users on our platform.
+- Built relationships and forged deals with top crypto exchanges for a token launch.
+- Represented AgriDex by speaking at conferences, hosting and appearing on podcasts, and pitching the company to whoever was interested.
 
-- **Agentic payments research program** — milestone report (Mar 2026), protocol reference notes, a verification-landscape map, five open questions logged with explicit priors, and a published Field Manual (Sep 2026).
-- **x402 verifier prototype** — a third-party x402 facilitator that inserts an LLM-as-judge quality gate before settlement. Four settlements on Base Sepolia (Apr 2026). Stalled honestly; the lessons are written up.
-- **Fieldnotes** — an editorial reference site on agentic payments, Solana liquidity and institutional adoption, with a day-gated data refresh and human review flags (Sep 2026).
-- **Proof market maker** — an automated market-making bot with inventory management, self-healing reconnects and a two-stage kill switch, plus an operator dashboard, for a paper-trading competition (Jun 2026).
-- **Hearth** — a production household-operations platform for a private client: 721 commits, 95 database migrations, 13 scheduled jobs, Slack and Google Workspace integrations (May – Jun 2026).
-- **Elo Solutions** — a one-person studio shipping production software for founders using AI-directed development.
+**Solana Foundation** — Business Development Intern · May 2024 – August 2024
 
-## Leadership
+- Engaged with large financial institutions about adopting Solana, including enterprise-focused libraries and extensions.
+- Helped structure and write major deal proposals with top asset managers and banks.
+- Created a custom GPT that can be used to quickly code applications built on Solana.
+- Supported Solana at key field events worldwide to connect and promote Solana and its ecosystem.
 
-**Tulane Fintech** — President · Feb 2023 – May 2025
+**Circle** — Marketing Intern · Boston, MA · June 2020 – September 2020
+
+- Researched and analyzed over 100 e-commerce companies to find potential new customers for Circle API and USDC use cases.
+- Tracked data on customers' financials, products, strengths and weaknesses, and potential contacts for sales development.
+
+**General Catalyst Partners** — Competitive Analysis Intern · March 2020 – July 2020
+
+- Completed full analysis of two portfolio companies and SWOT analyses of each industry competitor for Evolv Technologies; work was submitted to Evolv's board of directors.
+
+## Additional Experience
+
+**President, Tulane Fintech** · February 2023 – May 2025 — Planned and executed events, coordinated guest speakers from across the country, managed funding, travel and recruitment, and oversaw the club's executive board.
+
+**Gap year** · September 2021 – May 2022 — Traveled around the world, two months per place, working as an intern, teacher and student, and spent much of the free time researching blockchain technology. Earlier: taught English in the Dominican Republic (2020); built houses and schools in Vietnam and Cambodia (2018); server and host at The Cottage and Limani, Wellesley, MA (2021 – 2023).
 
 ## Education
 
-**Tulane University** — B.S., Political Science · 2022 – 2025
-**Brandeis University** · 2020 – 2021
+**Tulane University** — Bachelor of Political Science · New Orleans, LA · August 2022 – May 2025
+**Brandeis University** · Boston, MA · August 2020 – May 2021
 
-## Skills
+## Proficiencies
 
-Business development & partnerships · Go-to-market · Primary research and thesis writing · Deal structuring · AI-assisted product building (Claude Code, agent workflows, Next.js / Supabase / Vercel) · Solana ecosystem, stablecoins, agentic payments, tokenization
+Computer: Excel, PowerPoint, data analysis, leveraging AI (Claude Code, agent workflows) · Language: English, Spanish (intermediate)

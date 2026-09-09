@@ -20,4 +20,4 @@ Launched 2026-09-09 ~15:15 ET.
 - geowatch: add CARTO_API_KEY env on Vercel or swap basemap; screenshots show watermark.
 - x402-verifier-facilitator: fix packages/shared import extensions so `pnpm --filter dashboard dev` runs from a fresh clone.
 - proof-market-maker: AWS identifiers remain in git history (not credentials).
-- 2026-09-09 ~15:05 ET (recorded in memory by another session): left Wormhole Mar 2026 — awaiting explicit confirmation in checklist
+- 2026-09-09 15:20 ET: Max supplied his updated resume (docx). Wormhole = BD Rep/DeFi Lead Jul 2025–Jan 2026, then BD Manager Jan–Mar 2026; self-employed AI research Mar 2026–present. resume.md + resume.pdf rebuilt from it, one page.
