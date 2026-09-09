@@ -1,18 +1,52 @@
 {
   "slug": "leads-crm",
-  "name": "Leads CRM",
-  "oneLiner": "A focused pipeline CRM for small teams, replatformed from a crypto-specific lead-gen tool into a general product.",
+  "name": "Crypto Leads",
+  "oneLiner": "A lead-gen tool for cross-chain DeFi BD: protocol leads, Wormhole tracker, sentiment, AI briefings. Live demo, no login.",
   "band": "shipped",
   "status": "demo",
   "period": "Apr 2026",
   "order": 4,
-  "stack": ["Next.js 16", "TypeScript", "Supabase (Auth, Postgres)", "Tailwind", "Anthropic API (summaries)", "CSV import"],
+  "stack": [
+    "Next.js 16",
+    "TypeScript",
+    "Supabase (Auth, Postgres)",
+    "Tailwind",
+    "Anthropic API (summaries)",
+    "CSV import"
+  ],
   "links": {
+    "demo": "https://crypto-leads.vercel.app",
     "repo": "https://github.com/ClawdGItMan/leads-crm"
   },
   "screenshots": [
-    { "src": "/screenshots/leads-crm/desktop.png", "alt": "Leads pipeline view with AI-generated summaries" },
-    { "src": "/screenshots/leads-crm/mobile.png", "alt": "Leads CRM on a phone" }
+    {
+      "src": "/screenshots/leads-crm/desktop.png",
+      "alt": "Crypto Leads dashboard: 46 protocol leads, Wormhole integrations, contacts and sentiment at a glance"
+    },
+    {
+      "src": "/screenshots/leads-crm/leads.png",
+      "alt": "Leads table with category, chain and TVL filters"
+    },
+    {
+      "src": "/screenshots/leads-crm/lead-detail.png",
+      "alt": "Lead detail with TVL, chains, contacts, announcements and notes"
+    },
+    {
+      "src": "/screenshots/leads-crm/wormhole.png",
+      "alt": "Wormhole integration tracker with live Wormholescan analytics"
+    },
+    {
+      "src": "/screenshots/leads-crm/sentiment.png",
+      "alt": "30-day sentiment chart per tracked token"
+    },
+    {
+      "src": "/screenshots/leads-crm/summaries.png",
+      "alt": "AI daily briefings on pipeline changes"
+    },
+    {
+      "src": "/screenshots/leads-crm/mobile.png",
+      "alt": "Crypto Leads on a phone"
+    }
   ],
   "whatIBuilt": "In February 2026 I built Crypto Leads, a lead-generation app for the BD work I was doing: DeFi protocols, Wormhole integrations, scraped announcements and AI summaries, with a Trigger.dev pipeline behind it. In April 2026 I audited it for what a sellable product would need and rebuilt it as Leads: dashboard, leads, contacts, summaries and settings, on a workspace-aware schema, with the crypto-specific taxonomy, scoring and Wormhole analytics stripped out of the active surface. CSV import and on-demand Anthropic summaries (with a local fallback when no key is set) are the only automated workflows in v1. Working MVP, no tests yet.",
   "whatILearned": "The audit was the most useful artefact. Writing down what was reusable (the page patterns, the summary workflow), what was tightly coupled (scoring, schema, prompts, even the CSV filename) and what was missing for a real product (multi-tenancy, access control, CRUD completeness) taught me more about product scope than the build did.\n\nIt is also the clearest example on this site of building a tool for my own BD job first and only later asking whether anyone else would want it.",
