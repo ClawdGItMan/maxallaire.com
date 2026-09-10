@@ -8,11 +8,6 @@ export const metadata: Metadata = {
   description: "Two essays on where crypto is headed, each with a 30-second version and the evidence that would prove it wrong.",
 };
 
-const PRINCIPLES = [
-  { n: "01", title: "Every number carries a date", body: "Volumes, shares and prices move. A figure without a date is a vibe, so each one here says when it was true." },
-  { n: "02", title: "The counter-evidence gets its own heading", body: "A thesis that only cites its supporting evidence is a pitch. I record what cut against me next to what supported me." },
-  { n: "03", title: "State what would move me", body: "Each essay closes with the specific observations that would change my mind, so the position can be scored later." },
-];
 
 export default function ThesisIndex() {
   const essays = loadEssays();
@@ -41,30 +36,6 @@ export default function ThesisIndex() {
           ))}
         </div>
       )}
-
-      <section className="mt-24 sm:mt-32" aria-labelledby="rules">
-        <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-4" data-scroll>
-            <p className="eyebrow mb-5" id="rules">
-              <span className="text-accent">Rules</span> · for every essay
-            </p>
-            <h2 className="display text-[2rem] sm:text-[2.6rem]">
-              How I keep myself <em>honest.</em>
-            </h2>
-          </div>
-          <ol className="grid gap-4 lg:col-span-8 sm:grid-cols-3">
-            {PRINCIPLES.map((p, i) => (
-              <li key={p.n} className="panel flex flex-col gap-3 p-5" data-scroll style={{ "--d": `${i * 90}ms` } as React.CSSProperties}>
-                <span className="mono text-[0.72rem] text-accent">{p.n}</span>
-                <h3 className="font-serif text-[1.2rem] leading-tight" style={{ fontVariationSettings: '"opsz" 48' }}>
-                  {p.title}
-                </h3>
-                <p className="text-[0.9rem] leading-[1.55] text-fg-2">{p.body}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
     </PageShell>
   );
 }
