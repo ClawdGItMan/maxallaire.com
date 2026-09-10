@@ -6,6 +6,7 @@ import { EssayCard } from "@/components/essay-card";
 import { SectionLabel } from "@/components/section-label";
 import { StatStrip } from "@/components/stat-strip";
 import { HeroStack } from "@/components/hero-stack";
+import { Marquee } from "@/components/marquee";
 import { formatMonth } from "@/lib/format";
 
 const WORDS = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
@@ -62,6 +63,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <Marquee items={site.tools ?? []} label="Apps, APIs and skills used across the projects" />
 
       {/* Numbers */}
       <section className="mx-auto max-w-7xl px-5 pt-14 sm:px-8 sm:pt-20" aria-labelledby="numbers">

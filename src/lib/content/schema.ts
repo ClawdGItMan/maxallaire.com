@@ -62,5 +62,7 @@ export const SiteSchema = z.object({
   now: z.string().optional(),
   /** Numbers shown in the proof strip: [{ value: "721", label: "commits on Hearth" }] */
   stats: z.array(z.object({ value: z.string(), label: z.string() })).optional(),
+  /** Apps, APIs and skills shown in the home-page ticker. Curated, not derived from project stacks. */
+  tools: z.array(z.string()).optional(),
 });
 export type Site = z.infer<typeof SiteSchema>;

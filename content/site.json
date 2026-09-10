@@ -29,5 +29,35 @@
       "label": "commits on one six-week build"
     }
   ],
-  "x": "https://x.com/Finderofgolden"
+  "x": "https://x.com/Finderofgolden",
+  "tools": [
+    "Claude Code",
+    "Claude Design",
+    "Anthropic API",
+    "Vercel AI SDK",
+    "LLM-as-judge",
+    "Supabase",
+    "Vercel",
+    "Vercel Cron",
+    "Cloudflare Workers",
+    "GitHub",
+    "Obsidian",
+    "Sentry",
+    "Slack API",
+    "Google Calendar API",
+    "Google Drive API",
+    "Google SSO",
+    "Whoop API",
+    "Strava API",
+    "Plaid",
+    "Apple Health",
+    "x402",
+    "USDC",
+    "Solana devnet",
+    "Proof.trade SDK",
+    "Wormholescan API",
+    "Primary-source research",
+    "Spec → plan → build",
+    "Agent orchestration"
+  ]
 }

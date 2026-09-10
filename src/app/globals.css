@@ -445,6 +445,15 @@ body::after {
   transform: none;
 }
 
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee {
+  animation: marquee 60s linear infinite;
+}
+.marquee:hover { animation-play-state: paused; }
+
 @keyframes pulse-dot {
   0%, 100% { box-shadow: 0 0 0 0 rgba(143, 227, 176, 0.55); }
   70% { box-shadow: 0 0 0 7px rgba(143, 227, 176, 0); }
@@ -457,6 +466,7 @@ body::after {
   [data-reveal] > * { animation: none; }
   [data-scroll] { opacity: 1; transform: none; transition: none; }
   .live-dot { animation: none; }
+  .marquee { animation: none; }
   html { scroll-behavior: auto; }
 }
 
