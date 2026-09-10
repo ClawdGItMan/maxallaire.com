@@ -26,10 +26,6 @@ export default function HomePage() {
         <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
           <div className="flex flex-col gap-8 lg:col-span-7" data-reveal>
             <p className="eyebrow flex flex-wrap items-center gap-x-3 gap-y-2">
-              <span className="inline-flex items-center gap-2 rounded-full border border-line-strong px-2.5 py-1.5 text-fg-2">
-                <span className="live-dot inline-block h-1.5 w-1.5 rounded-full bg-mint" aria-hidden />
-                Open to ecosystem &amp; BD roles
-              </span>
               <span>Sep 2026 · {projects.length} projects · {liveCount} live</span>
             </p>
             <h1 className="display text-[2.7rem] sm:text-[4rem] lg:text-[4.9rem] xl:text-[5.4rem]">
