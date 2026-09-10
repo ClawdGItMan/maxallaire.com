@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { loadSite, loadProjects, loadEssays, loadTimeline } from "@/lib/content/load";
+import { loadSite, loadProjects, loadEssays } from "@/lib/content/load";
 import { resolveImage } from "@/lib/images";
 import { ProjectFeature, type ProjectView } from "@/components/project-card";
 import { EssayCard } from "@/components/essay-card";
@@ -7,27 +7,17 @@ import { SectionLabel } from "@/components/section-label";
 import { StatStrip } from "@/components/stat-strip";
 import { HeroStack } from "@/components/hero-stack";
 import { Marquee } from "@/components/marquee";
-import { formatMonth } from "@/lib/format";
 
 const WORDS = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
-
-const METHOD = [
-  { n: "01", title: "Spec", body: "What is this for, who uses it, and what does “working” mean. Written before any code." },
-  { n: "02", title: "Plan", body: "The spec broken into tasks small enough that an agent finishes one and I can verify it." },
-  { n: "03", title: "Build & judge", body: "Agents build in parallel; a second agent verifies; I judge outcomes the way a founder checks a contractor." },
-];
 
 export default function HomePage() {
   const site = loadSite();
   const projects = loadProjects();
   const essays = loadEssays();
-  const timeline = loadTimeline();
   const headliners: ProjectView[] = projects
     .filter((p) => p.band === "headliner")
     .map((p) => ({ project: p, image: resolveImage(p.screenshots[0]) }));
   const liveCount = projects.filter((p) => p.status === "live").length;
-  const recent = timeline.slice(-3).reverse();
-  const slugs = new Set(projects.map((p) => p.slug));
 
   return (
     <>
@@ -128,68 +118,6 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      {/* How I work */}
-      <section className="mx-auto max-w-7xl px-5 pt-28 sm:px-8 sm:pt-40" aria-labelledby="method">
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5" data-scroll>
-            <SectionLabel n="03" className="mb-6">
-              <span id="method">How I work</span>
-            </SectionLabel>
-            <h2 className="display text-[2.3rem] sm:text-[3.2rem]">
-              Direct the work. <em>Judge the outcome.</em>
-            </h2>
-            <p className="lede mt-6 max-w-[44ch] text-[1.1rem] text-fg-2">
-              I don&rsquo;t write code by hand. I give AI agents a spec, a plan and a definition of done, then check what comes back.
-            </p>
-            <ol className="mt-10 flex flex-col divide-y divide-line border-y border-line">
-              {METHOD.map((m) => (
-                <li key={m.n} className="grid grid-cols-[3rem_1fr] gap-4 py-5">
-                  <span className="mono pt-1 text-[0.72rem] text-accent">{m.n}</span>
-                  <div>
-                    <h3 className="font-serif text-[1.35rem] leading-tight" style={{ fontVariationSettings: '"opsz" 48' }}>
-                      {m.title}
-                    </h3>
-                    <p className="mt-1.5 text-[0.92rem] leading-[1.55] text-fg-2">{m.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          <div className="lg:col-span-7" data-scroll style={{ "--d": "120ms" } as React.CSSProperties}>
-            <div className="panel p-6 sm:p-8">
-              <div className="flex items-center justify-between gap-4">
-                <span className="eyebrow">Recent months</span>
-                <Link href="/how-i-work" className="mono text-[0.68rem] uppercase tracking-[0.12em] text-fg-2 hover:text-fg">
-                  Full timeline <span aria-hidden className="text-accent">→</span>
-                </Link>
-              </div>
-              <ol className="mt-6 flex flex-col divide-y divide-line">
-                {recent.map((e) => {
-                  const linked = e.projectSlug && slugs.has(e.projectSlug);
-                  return (
-                    <li key={`${e.month}-${e.title}`} className="grid gap-2 py-5 sm:grid-cols-[6.5rem_1fr] sm:gap-6">
-                      <span className="mono text-[0.72rem] uppercase tracking-[0.12em] text-accent">{formatMonth(e.month)}</span>
-                      <div>
-                        <h3 className="font-serif text-[1.2rem] leading-tight" style={{ fontVariationSettings: '"opsz" 48' }}>
-                          {linked ? (
-                            <Link href={`/work/${e.projectSlug}`} className="link-fg">
-                              {e.title}
-                            </Link>
-                          ) : (
-                            e.title
-                          )}
-                        </h3>
-                        <p className="mt-1.5 text-[0.9rem] leading-[1.55] text-fg-2 tnum line-clamp-3">{e.detail}</p>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

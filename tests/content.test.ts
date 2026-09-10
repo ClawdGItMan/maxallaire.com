@@ -4,7 +4,6 @@ import {
   loadProject,
   loadEssays,
   loadEssay,
-  loadTimeline,
   loadSite,
   resolveScreenshot,
 } from "@/lib/content/load";
@@ -45,9 +44,6 @@ describe("content", () => {
     expect(loadEssay("definitely-not-an-essay")).toBeUndefined();
   });
 
-  it("timeline validates", () => {
-    expect(Array.isArray(loadTimeline())).toBe(true);
-  });
 
   it("site config validates", () => {
     expect(loadSite().name).toBeTruthy();

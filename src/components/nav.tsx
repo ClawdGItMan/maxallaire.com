@@ -7,8 +7,7 @@ import { useEffect, useState } from "react";
 const ITEMS = [
   { href: "/thesis", label: "Thesis", n: "01" },
   { href: "/work", label: "Work", n: "02" },
-  { href: "/how-i-work", label: "How I Work", n: "03" },
-  { href: "/resume", label: "Resume", n: "04" },
+  { href: "/resume", label: "Resume", n: "03" },
 ] as const;
 
 export function Nav({ name, resumePdf }: { name: string; resumePdf: string }) {

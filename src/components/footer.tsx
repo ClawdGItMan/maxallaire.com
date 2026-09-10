@@ -59,7 +59,6 @@ export function Footer({ site }: { site: Site }) {
               {[
                 ["/thesis", "Thesis"],
                 ["/work", "Work"],
-                ["/how-i-work", "How I Work"],
                 ["/resume", "Resume"],
               ].map(([href, label]) => (
                 <li key={href}>

@@ -20,7 +20,7 @@ export default function ResumePage() {
       <div className="no-print flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between" data-reveal>
         <div className="flex flex-col gap-5">
           <p className="eyebrow">
-            <span className="text-accent">04</span> · Resume
+            <span className="text-accent">03</span> · Resume
           </p>
           <h1 className="display text-[2.4rem] sm:text-[3.4rem]">
             One page, <em>kept current.</em>

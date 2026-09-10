@@ -32,7 +32,7 @@ export default function OpenGraphImage() {
         <div style={{ display: "flex", fontSize: 66, lineHeight: 1.04, letterSpacing: -2, maxWidth: 1000 }}>{site.headline}</div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", fontSize: 22, color: "#a9a49a", fontFamily: "monospace" }}>
           <div style={{ display: "flex" }}>{projects.length} PROJECTS · {live} LIVE · CRYPTO × AI</div>
-          <div style={{ display: "flex", color: "#ffb490" }}>Thesis · Work · How I Work · Resume</div>
+          <div style={{ display: "flex", color: "#ffb490" }}>Thesis · Work · Resume</div>
         </div>
       </div>
     ),

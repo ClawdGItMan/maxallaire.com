@@ -5,11 +5,9 @@ import type { ZodType } from "zod";
 import {
   ProjectSchema,
   EssayFrontmatter,
-  TimelineSchema,
   SiteSchema,
   type Project,
   type Essay,
-  type Timeline,
   type Site,
   type Band,
 } from "./schema";
@@ -102,12 +100,6 @@ export function loadEssays(): Essay[] {
 
 export function loadEssay(slug: string): Essay | undefined {
   return loadEssays().find((e) => e.slug === slug);
-}
-
-export function loadTimeline(): Timeline {
-  const file = path.join(contentDir(), "timeline.json");
-  const entries = parseOrThrow(TimelineSchema, readJson(file), file);
-  return entries.sort((a, b) => a.month.localeCompare(b.month));
 }
 
 export function loadSite(): Site {

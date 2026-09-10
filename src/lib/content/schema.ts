@@ -39,15 +39,6 @@ export const EssayFrontmatter = z.object({
 });
 export type Essay = z.infer<typeof EssayFrontmatter> & { body: string };
 
-export const TimelineEntry = z.object({
-  month: z.string(), // "2026-03"
-  title: z.string(),
-  detail: z.string(),
-  projectSlug: z.string().optional(),
-});
-export const TimelineSchema = z.array(TimelineEntry);
-export type Timeline = z.infer<typeof TimelineSchema>;
-
 export const SiteSchema = z.object({
   name: z.string(),
   headline: z.string(),
