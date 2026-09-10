@@ -3,17 +3,27 @@
   "name": "Elo Solutions",
   "oneLiner": "The site for my one-person studio: production software for founders, built by directing AI agents.",
   "band": "shipped",
-  "status": "live",
+  "status": "discontinued",
   "period": "May–Sep 2026",
   "order": 5,
-  "stack": ["Next.js", "TypeScript", "Tailwind", "Vercel"],
+  "stack": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind",
+    "Vercel"
+  ],
   "links": {
-    "repo": "https://github.com/ClawdGItMan/elo-solutions-website",
-    "live": "https://elosolutions.org"
+    "repo": "https://github.com/ClawdGItMan/elo-solutions-website"
   },
   "screenshots": [
-    { "src": "/screenshots/elo-solutions/desktop.png", "alt": "Elo Solutions home: hero and the work grid linking to Hearth, Marathon, Personal OS and Leads CRM case studies" },
-    { "src": "/screenshots/elo-solutions/mobile.png", "alt": "Elo Solutions on a phone" }
+    {
+      "src": "/screenshots/elo-solutions/desktop.png",
+      "alt": "Elo Solutions home: hero and the work grid linking to Hearth, Marathon, Personal OS and Leads CRM case studies"
+    },
+    {
+      "src": "/screenshots/elo-solutions/mobile.png",
+      "alt": "Elo Solutions on a phone"
+    }
   ],
   "whatIBuilt": "Elo Solutions is the name I ship client and product work under. The site is a marketing page for a studio of one: what I build (custom apps, AI features, crypto and web3, 0-to-1 products), how I work (spec, plan, build with agents, verify), and a work section that links to the case studies on this portfolio. First version May 2026; rewritten in September 2026 to match the positioning here and to replace the placeholder founder details the design prototype shipped with. It also holds the scoped Hearth mock used for the anonymised case study, since the real product cannot be shown.",
   "whatILearned": "A studio site is a positioning exercise. The first version said \"boutique AI and software studio\" and \"principal engineer,\" which is not what I am. The second says a founder who directs AI to ship production software and evaluates by outcomes. Saying it plainly is the whole job of the page.",

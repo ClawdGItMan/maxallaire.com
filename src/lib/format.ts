@@ -14,6 +14,7 @@ export const STATUS_LABEL: Record<string, string> = {
   prototype: "Prototype",
   "case-study": "Case study",
   archived: "Archived",
+  discontinued: "Discontinued",
 };
 
 /** Two-digit index for eyebrow labels: 1 → "01" */

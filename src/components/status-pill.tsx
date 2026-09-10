@@ -7,6 +7,7 @@ const DOT: Record<Status, string> = {
   prototype: "border border-fg-3",
   "case-study": "bg-fg-2",
   archived: "border border-fg-3 opacity-60",
+  discontinued: "border border-fg-3 opacity-60",
 };
 
 /** `onPaper` flips the colours for use inside a .sheet */

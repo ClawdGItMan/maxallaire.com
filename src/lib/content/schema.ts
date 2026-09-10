@@ -3,7 +3,7 @@ import { z } from "zod";
 export const Band = z.enum(["headliner", "shipped", "experiment"]);
 export type Band = z.infer<typeof Band>;
 
-export const Status = z.enum(["live", "demo", "prototype", "case-study", "archived"]);
+export const Status = z.enum(["live", "demo", "prototype", "case-study", "archived", "discontinued"]);
 export type Status = z.infer<typeof Status>;
 
 export const ProjectSchema = z.object({
