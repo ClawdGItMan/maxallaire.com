@@ -107,7 +107,7 @@ export function loadSite(): Site {
   return parseOrThrow(SiteSchema, readJson(file), file);
 }
 
-/** Read an optional markdown document from content/ (e.g. "how-i-work.md"); undefined if absent. */
+/** Read an optional markdown document from content/ (e.g. "resume.md"); undefined if absent. */
 export function loadMarkdown(name: string): string | undefined {
   const file = path.join(contentDir(), name);
   if (!fs.existsSync(file)) return undefined;

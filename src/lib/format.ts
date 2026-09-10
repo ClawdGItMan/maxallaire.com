@@ -7,12 +7,6 @@ export function formatDate(iso: string): string {
   return `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}`;
 }
 
-/** "2026-03" → "Mar 2026" */
-export function formatMonth(ym: string): string {
-  const m = /^(\d{4})-(\d{2})/.exec(ym);
-  if (!m) return ym;
-  return `${MONTHS[Number(m[2]) - 1]} ${m[1]}`;
-}
 
 export const STATUS_LABEL: Record<string, string> = {
   live: "Live",
