@@ -1,35 +1,49 @@
 {
   "slug": "x402-verifier",
-  "name": "x402 Verifier Facilitator",
-  "oneLiner": "x402 facilitator prototype with an LLM-as-judge work-quality endpoint. Four testnet settlements; the verdict never got wired into /settle.",
+  "name": "x402 Verifier",
+  "oneLiner": "Check an agent's work before the x402 payment moves. Live Solana-devnet simulation: seven task types, stepped judge policies, disputes.",
   "band": "headliner",
-  "status": "prototype",
-  "period": "Apr 2026",
+  "status": "live",
+  "period": "Apr 2026 · redesigned Sep 2026",
   "order": 2,
   "stack": [
     "TypeScript",
+    "Next.js",
     "pnpm monorepo",
-    "x402 (@x402/core, /express, /fetch, /evm)",
-    "EVM testnet",
+    "x402 (@x402/core, /express, /fetch)",
+    "Solana devnet (simulated settlement)",
     "USDC",
-    "Next.js dashboard",
-    "LLM-as-judge (Anthropic / OpenAI)"
+    "Deterministic checks + LLM-as-judge (Anthropic, optional live)",
+    "Playwright + Vitest"
   ],
   "links": {
+    "live": "https://x402-verifier-lab.vercel.app/?task=summary",
     "repo": "https://github.com/ClawdGItMan/x402-verifier-facilitator"
   },
   "screenshots": [
     {
+      "src": "/screenshots/x402-verifier/lab-hero.png",
+      "alt": "The verifier lab: buyer agent defines the task, seller produces the work, verifier checks before payment moves"
+    },
+    {
+      "src": "/screenshots/x402-verifier/decision.png",
+      "alt": "A verification decision: structure checks, rubric score, confidence, and a receipt binding work, criteria, price, policy and network before release"
+    },
+    {
       "src": "/screenshots/x402-verifier/desktop.png",
-      "alt": "The verifier dashboard: browser wallet on testnet, agent USDC balance, and the live payment path from demo service through the local facilitator to settlement"
+      "alt": "Full workbench: editable deliverable, stepped verification policy, decision, and the verification-cost calculator"
+    },
+    {
+      "src": "/screenshots/x402-verifier/architecture.png",
+      "alt": "Verification flow: deterministic checks, judge, hold, reject, payment gate, challenge window, simulated release"
     },
     {
       "src": "/screenshots/x402-verifier/mobile.png",
-      "alt": "The verifier dashboard on a phone"
+      "alt": "The verifier lab on a phone"
     }
   ],
-  "whatIBuilt": "Every x402 facilitator shipping in spring 2026 verified the payment: signature, nonce, settlement. None verified the work. For subjective agent tasks like writing or analysis, a signature-verified settlement is not enough; the agent paying needs a quality gate. So I set out to build a third-party facilitator that proxies the reference x402.org facilitator and adds an LLM-as-judge step before /settle. What actually shipped is narrower, and the README says so: the judge runs as a separate /judge endpoint the seller calls, while my facilitator's /verify and /settle are still pass-through proxies. V1 proved the judge call and the settlement path separately; wiring the verdict into /settle was the next step and didn't ship.\n\nWhat shipped between 2026-04-20 and 2026-04-29: a pnpm monorepo with a facilitator, a paid demo service, a buyer agent and a browser dashboard. Four testnet settlements, all with transaction hashes in the README: a baseline x402 payment on 2026-04-23, the same payment routed through my facilitator-in-the-middle, and two dashboard-triggered agent runs. Seven task-type endpoints were scoped (structured extraction, code, summarisation, translation, creative, strategic, generic). The judge has one rubric of the seven, and it is not yet in the settlement path. It stalled on 2026-04-29 and I have written it up that way rather than as a finished product.",
-  "whatILearned": "Three things changed my March assumptions. I always believed Solana would win, and it happened faster than I planned for: Solana passed Base on daily x402 volume in January 2026. The lesson was to build for any chain from day one. The category where verification matters most, AI-generated services, had almost no volume ($14.2k against $548.5k in agent-to-agent services). And the judge does not pay for itself at micropayment scale: $0.01–$0.15 per evaluation against a $0.20 average transaction is 5–75% of the value. Whether agent transactions grow past about $5 is the single load-bearing assumption in the whole thesis.\n\nI also learned what a real prototype costs in operator time: funding testnet wallets, chasing faucets, reading facilitator responses. Doing it myself is why I can now explain the settlement path to a partner in plain language.",
-  "solanaRelevance": "The design is chain-abstract because Solana was already leading x402 volume by the time I built it. The gap it targets, outcome verification on top of a payment standard, is the one piece missing from Solana's agentic-payments stack as of September 2026: the network has settlement, attestation-based identity and roughly 65% of x402 volume, and nothing that checks an agent did what it was paid for. Pay.sh meters access per call; that is not the same thing.",
-  "builtWithAI": "Built entirely by directing Claude Code against a twelve-section implementation plan written in the research vault first. I never read the code. I judged it by whether the transactions settled on the testnet, whether the dashboard showed the payment path live in a browser, and whether the README matched what I saw. The four transaction hashes are the evidence."
+  "whatIBuilt": "Every x402 facilitator shipping in spring 2026 verified the payment: signature, nonce, settlement. None verified the work. For subjective agent tasks like writing or analysis, a signature-verified settlement is not enough; the paying agent needs a quality gate.\n\n**April 2026, the first prototype.** A pnpm monorepo with a facilitator, a paid demo service, a buyer agent and a browser dashboard. Four testnet settlements on Base Sepolia, all with transaction hashes in the README. The honest version: the judge ran as a separate endpoint the seller called, while the facilitator's /verify and /settle stayed pass-through proxies. It proved the judge call and the settlement path separately, then stalled on 2026-04-29.\n\n**September 2026, the redesign.** I rebuilt it as a public verification lab you can use without a wallet or an API key. Give an agent a task, inspect the deliverable, edit it, and watch a verifier decide whether payment is released, blocked, held or disputed. Seven task families (invoice extraction, code behaviour, summarisation, translation, product copy, research recommendations, an acceptance contract). Real deterministic checks: JSON parsing, strict schema validation, source comparison, length and quantity constraints, buyer-owned test vectors. Subjective quality through authored example judgments, or an optional live Anthropic judge. Five stepped policies from deterministic-only up to optimistic release with a 20-second dispute window, where a hard failure can never be overridden by a high average score. The server binds every receipt to the exact artifact, policy, amount, network and expiry, so tampering, early release and double release all fail closed. A cost calculator shows where verification stops paying for itself against the payment size. The active target is Solana devnet only; the Base path is archived in the app.",
+  "whatILearned": "Three things changed my March assumptions. I always believed Solana would win, and it happened faster than I planned for: Solana passed Base on daily x402 volume in January 2026, which is why the redesign targets Solana devnet alone. The category where verification matters most, AI-generated services, had almost no volume ($14.2k against $548.5k in agent-to-agent services). And a model judge does not pay for itself at micropayment scale: $0.01–$0.15 per evaluation against a $0.20 average transaction is 5–75% of the value. That number became the cost calculator in the lab, and it is why the design leads with cheap deterministic checks and escalates only when the work justifies it.\n\nThe redesign also taught me what the April version was missing: the policy boundary. A judge that merely advises is not a gate. Binding the receipt to the artifact and refusing release on any hard failure is the part that makes verification enforceable, and it is the part I now lead with when I explain this to a partner.",
+  "solanaRelevance": "The lab's only active network is Solana devnet. Solana carried roughly 65% of x402 volume by September 2026 and has settlement and attestation-based identity, but nothing that checks an agent did what it was paid for. Pay.sh meters access per call; that is not the same thing. This prototype is the missing piece drawn to scale: what a verification layer on top of Solana agent payments would decide, when, and at what cost.",
+  "builtWithAI": "Both versions were built by directing AI coding agents against plans written in the research vault first; I never read the code. In April I judged it by whether transactions settled on testnet and whether the dashboard matched the README. In September I judged the lab by using it as a buyer would: editing deliverables, trying to sneak an invented claim past the checks, disputing a release, and reading the receipt. The test suite and the verification record in the repo are the evidence."
 }

@@ -57,4 +57,4 @@ Second, if reputation works well enough, most transactions never need judging. P
 
 My answer to both is that the tail is where the money is, and the audit trail is what makes reputation portable in the first place. But that is an assertion, not evidence. The number that would move me most is real dispute rates from any live agent-payment deployment. Nobody has published one as of September 2026.
 
-I tested the mechanics of this myself: [the x402 verifier prototype](/work/x402-verifier), four testnet settlements in April 2026, and an honest account of where it stalled.
+I tested the mechanics of this myself: [the x402 verifier](/work/x402-verifier). Four testnet settlements in April 2026, an honest account of where that version stalled, and in September a [public verification lab](https://x402-verifier-lab.vercel.app/?task=summary) on Solana devnet where you can edit an agent's work and watch the payment gate decide.
