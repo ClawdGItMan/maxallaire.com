@@ -43,7 +43,7 @@ export default function HomePage() {
               <span>Sep 2026 · {projects.length} projects · {liveCount} live</span>
             </p>
             <h1 className="display text-[2.7rem] sm:text-[4rem] lg:text-[4.9rem] xl:text-[5.4rem]">
-              I research where crypto and AI meet, then build prototypes to find out <em>if I&rsquo;m right.</em>
+              Curious by nature, builder by habit. I chase new ideas and turn them into things that <em>move technology forward.</em>
             </h1>
             <p className="lede max-w-[52ch] text-[1.15rem] text-fg-2 sm:text-[1.35rem]">{site.sub}</p>
             <div className="flex flex-wrap items-center gap-3 pt-2">
