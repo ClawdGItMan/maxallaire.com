@@ -5,7 +5,6 @@ import { ProjectFeature, type ProjectView } from "@/components/project-card";
 import { EssayCard } from "@/components/essay-card";
 import { SectionLabel } from "@/components/section-label";
 import { StatStrip } from "@/components/stat-strip";
-import { Marquee } from "@/components/marquee";
 import { HeroStack } from "@/components/hero-stack";
 import { formatMonth } from "@/lib/format";
 
@@ -14,20 +13,6 @@ const METHOD = [
   { n: "02", title: "Plan", body: "The spec broken into tasks small enough that an agent finishes one and I can verify it." },
   { n: "03", title: "Build & judge", body: "Agents build in parallel; a second agent verifies; I judge outcomes the way a founder checks a contractor." },
 ];
-
-/** Most-used stack items across every project, for the ticker. */
-function topStack(projects: { stack: string[] }[], n: number): string[] {
-  const freq = new Map<string, number>();
-  for (const p of projects)
-    for (const raw of p.stack) {
-      const s = raw.replace(/\s*\(.*\)\s*/g, "").replace(/\s+\d+(\.\d+)*$/, "").trim(); // "Next.js 16", "Supabase (Postgres, RLS)" → "Next.js", "Supabase"
-      if (s) freq.set(s, (freq.get(s) ?? 0) + 1);
-    }
-  return [...freq.entries()]
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .slice(0, n)
-    .map(([s]) => s);
-}
 
 export default function HomePage() {
   const site = loadSite();
@@ -38,7 +23,6 @@ export default function HomePage() {
     .filter((p) => p.band === "headliner")
     .map((p) => ({ project: p, image: resolveImage(p.screenshots[0]) }));
   const liveCount = projects.filter((p) => p.status === "live").length;
-  const ticker = topStack(projects, 18);
   const recent = timeline.slice(-3).reverse();
   const slugs = new Set(projects.map((p) => p.slug));
 
@@ -76,8 +60,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <Marquee items={ticker} label="Tools and stacks used across the projects" />
 
       {/* Numbers */}
       <section className="mx-auto max-w-7xl px-5 pt-14 sm:px-8 sm:pt-20" aria-labelledby="numbers">
