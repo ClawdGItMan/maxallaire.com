@@ -8,6 +8,8 @@ import { StatStrip } from "@/components/stat-strip";
 import { HeroStack } from "@/components/hero-stack";
 import { formatMonth } from "@/lib/format";
 
+const WORDS = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
+
 const METHOD = [
   { n: "01", title: "Spec", body: "What is this for, who uses it, and what does “working” mean. Written before any code." },
   { n: "02", title: "Plan", body: "The spec broken into tasks small enough that an agent finishes one and I can verify it." },
@@ -78,7 +80,7 @@ export default function HomePage() {
                 <span id="headliners">Headliners</span>
               </SectionLabel>
               <h2 className="display text-[2.3rem] sm:text-[3.4rem]">
-                Four builds that <em>test the thesis.</em>
+                {WORDS[headliners.length] ?? headliners.length} builds that <em>test the thesis.</em>
               </h2>
             </div>
             <p className="max-w-[40ch] text-[0.95rem] leading-[1.6] text-fg-2">

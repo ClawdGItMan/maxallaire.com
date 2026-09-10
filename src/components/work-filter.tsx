@@ -15,7 +15,7 @@ const TABS: { key: Filter; label: string }[] = [
 ];
 
 const BAND_INTRO: Record<Band, string> = {
-  headliner: "The four that matter most for Solana: research, payments, tokenization, and a live market-making bot.",
+  headliner: "The ones that matter most for Solana: research, payments, tokenization, a live market-making bot, and the BD tool I used in the field.",
   shipped: "Products with real users or a public demo. Each one taught me something about running a build.",
   experiment: "Weekend builds and design studies. Short write-ups, honest about what they are.",
 };
