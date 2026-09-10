@@ -5,7 +5,7 @@ import { EssayCard } from "@/components/essay-card";
 
 export const metadata: Metadata = {
   title: "Thesis",
-  description: "Three essays on where crypto and AI meet, each with a 30-second version and the evidence that would prove it wrong.",
+  description: "Two essays on where crypto is headed, each with a 30-second version and the evidence that would prove it wrong.",
 };
 
 const PRINCIPLES = [
@@ -29,13 +29,13 @@ export default function ThesisIndex() {
             Priors, <em>written down.</em>
           </>
         }
-        lede="Three positions on where crypto and AI meet, starting with the one I published in April. Each one opens with the 30-second version and closes with what would make me wrong."
+        lede="Two positions on where crypto is headed, starting with the one I published in April. Each one opens with the 30-second version and closes with what would make me wrong."
       />
 
       {essays.length === 0 ? (
         <p className="mt-16 font-serif text-fg-2">Essays are being edited. Check back shortly.</p>
       ) : (
-        <div className="mt-14 grid gap-6 md:grid-cols-3 sm:mt-20">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 sm:mt-20">
           {essays.map((e, i) => (
             <EssayCard key={e.slug} essay={e} index={i + 1} delay={i * 110} />
           ))}

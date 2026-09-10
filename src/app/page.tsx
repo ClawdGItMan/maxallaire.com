@@ -114,10 +114,10 @@ export default function HomePage() {
               </h2>
             </div>
             <p className="max-w-[40ch] text-[0.95rem] leading-[1.6] text-fg-2">
-              Three positions on where crypto and AI meet, starting with the essay I published in April. Each opens with the 30-second version and closes with what would make me wrong.
+              Two positions on where crypto is headed, starting with the essay I published in April. Each opens with the 30-second version and closes with what would make me wrong.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {essays.map((e, i) => (
               <EssayCard key={e.slug} essay={e} index={i + 1} delay={i * 110} />
             ))}
