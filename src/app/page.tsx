@@ -89,7 +89,7 @@ export default function HomePage() {
             <Link href="/work" className="btn">
               All {projects.length} projects <span aria-hidden className="text-accent">→</span>
             </Link>
-            <span className="text-[0.9rem] text-fg-3">Shipped products, experiments, and the ones that stalled.</span>
+            <span className="text-[0.9rem] text-fg-3">Products, experiments, and the ones that stalled.</span>
           </p>
         </section>
       ) : null}

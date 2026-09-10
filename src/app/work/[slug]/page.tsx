@@ -11,7 +11,7 @@ import { PageShell, Sheet } from "@/components/page-shell";
 
 type Params = { slug: string };
 
-const BAND_LABEL = { headliner: "Headliner", shipped: "Shipped", experiment: "Experiment" } as const;
+const BAND_LABEL = { headliner: "Headliner", shipped: "Product", experiment: "Experiment" } as const;
 const LINK_LABEL = { live: "Open live site", demo: "Try the demo", repo: "Source on GitHub" } as const;
 
 export function generateStaticParams(): Params[] {

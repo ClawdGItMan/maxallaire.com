@@ -4,7 +4,7 @@ import { SectionLabel } from "@/components/section-label";
 
 const BAND_INTRO: Record<Band, string> = {
   headliner: "The ones that matter most for Solana: research, payments, tokenization, a live market-making bot, and the BD tool I used in the field.",
-  shipped: "Products with real users or a public demo. Each one taught me something about running a build.",
+  shipped: "Products beyond the crypto work, each with real users or a public demo. Every one taught me something about running a build.",
   experiment: "Weekend builds and design studies. Short write-ups, honest about what they are.",
 };
 
@@ -33,7 +33,7 @@ export function WorkSections({ views }: { views: ProjectView[] }) {
       {shipped.length > 0 ? (
         <section className="mt-20 sm:mt-32" aria-labelledby="shipped">
           <SectionLabel n="B" className="mb-3">
-            <span id="shipped">Shipped</span>
+            <span id="shipped">Products</span>
           </SectionLabel>
           <p className="mb-10 max-w-[60ch] text-[0.95rem] text-fg-2">{BAND_INTRO.shipped}</p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

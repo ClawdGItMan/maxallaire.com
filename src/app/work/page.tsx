@@ -7,7 +7,7 @@ import type { ProjectView } from "@/components/project-card";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Every project as a case study: headliners, shipped products, and experiments.",
+  description: "Every project as a case study: headliners, products, and experiments.",
 };
 
 export default function WorkIndex() {

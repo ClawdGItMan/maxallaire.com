@@ -62,7 +62,7 @@ export function ProjectFeature({ view, index, flip = false }: { view: ProjectVie
   );
 }
 
-/** Grid card for shipped products. */
+/** Grid card for the products band. */
 export function ProjectCard({ view, index, delay = 0 }: { view: ProjectView; index: number; delay?: number }) {
   const { project, image } = view;
   return (
